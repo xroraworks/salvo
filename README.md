@@ -109,7 +109,6 @@ La repository contiene due siti web separati.
 
 ```text
 fotografosicilia/
-│
 ├── fotografosicilia.com/
 ├── fotografosicilia.it/
 ├── docs/
@@ -129,33 +128,22 @@ La cartella `fotografosicilia.com` contiene la versione inglese e principale del
 
 ```text
 fotografosicilia.com/
-│
 ├── index.html
-│
 ├── about/
 │   └── index.html
-│
 ├── services/
 │   └── index.html
-│
 ├── portfolio/
 │   └── index.html
-│
 ├── contact/
 │   └── index.html
-│
 └── assets/
-    │
     ├── css/
     │   └── style.css
-    │
     ├── js/
     │   └── main.js
-    │
     ├── images/
-    │
     ├── fonts/
-    │
     └── icons/
 ```
 
@@ -175,33 +163,22 @@ La cartella `fotografosicilia.it` contiene la versione italiana del sito.
 
 ```text
 fotografosicilia.it/
-│
 ├── index.html
-│
 ├── chi-sono/
 │   └── index.html
-│
 ├── servizi/
 │   └── index.html
-│
 ├── portfolio/
 │   └── index.html
-│
 ├── contatti/
 │   └── index.html
-│
 └── assets/
-    │
     ├── css/
     │   └── style.css
-    │
     ├── js/
     │   └── main.js
-    │
     ├── images/
-    │
     ├── fonts/
-    │
     └── icons/
 ```
 
@@ -252,7 +229,6 @@ Ogni dominio possiede le proprie risorse.
 
 ```text
 assets/
-│
 ├── css/
 ├── js/
 ├── images/
@@ -314,7 +290,6 @@ Esempio:
 
 ```text
 images/
-│
 ├── home/
 ├── about/
 ├── services/
@@ -413,7 +388,6 @@ La cartella è organizzata nel seguente modo:
 
 ```text
 docs/
-│
 ├── coding-guidelines.md
 ├── seo-geo-guidelines.md
 ├── site-structure.md
@@ -725,4 +699,3 @@ Le pagine principali sono in fase di standardizzazione e sviluppo.
 ---
 
 © Xrora & XroraWorks
- 
