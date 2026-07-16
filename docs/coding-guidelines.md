@@ -4,7 +4,14 @@
 
 Questo documento definisce le regole ufficiali di sviluppo del progetto **Fotografo Sicilia**.
 
-Le regole si applicano a entrambi i domini:
+Le regole si applicano a tutti i domini pubblici del progetto.
+
+Domini brand:
+
+- `https://www.salvonicolosiph.com/`
+- `https://www.salvonicolosiph.it/`
+
+Domini SEO/geografici:
 
 - `https://www.fotografosicilia.com/`
 - `https://www.fotografosicilia.it/`

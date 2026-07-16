@@ -16,6 +16,22 @@ Riferimento per:
 
 ## 1. Domini
 
+### Domini brand
+
+English:
+
+```text
+https://www.salvonicolosiph.com/
+```
+
+Italiano:
+
+```text
+https://www.salvonicolosiph.it/
+```
+
+### Domini SEO/geografici
+
 English:
 
 ```text
@@ -28,21 +44,41 @@ Italiano:
 https://www.fotografosicilia.it/
 ```
 
-`x-default` punta alla pagina equivalente sul `.com`.
+`x-default` deve puntare alla pagina equivalente scelta come default per il gruppo linguistico.
 
-Ogni pagina utilizza un canonical autoreferenziale.
+Ogni pagina utilizza un canonical coerente con la strategia di pubblicazione.
+
+Se la stessa pagina viene pubblicata sui domini brand e sui domini SEO/geografici,
+la relazione tra canonical, hreflang, contenuti distinti ed eventuali redirect
+deve essere documentata prima della pubblicazione.
 
 ---
 
-## 2. Mappa principale
+## 2. Mappa principale SEO/geografica
 
-| Pagina | English `.com` | Italiano `.it` |
+| Pagina | English `fotografosicilia.com` | Italiano `fotografosicilia.it` |
 |---|---|---|
 | Home | `/` | `/` |
 | About | `/about/` | `/chi-sono/` |
 | Services | `/services/` | `/servizi/` |
 | Portfolio | `/portfolio/` | `/portfolio/` |
 | Contact | `/contact/` | `/contatti/` |
+
+## 2.1 Mappa principale brand
+
+| Pagina | English `salvonicolosiph.com` | Italiano `salvonicolosiph.it` |
+|---|---|---|
+| Home | `/` | `/` |
+| About | `/about/` | `/chi-sono/` |
+| Services | `/services/` | `/servizi/` |
+| Portfolio | `/portfolio/` | `/portfolio/` |
+| Contact | `/contact/` | `/contatti/` |
+
+La mappa brand segue la stessa struttura linguistica della mappa SEO/geografica,
+salvo diversa decisione documentata.
+
+Le sezioni seguenti documentano la coppia SEO/geografica attualmente presente
+nella struttura della repository.
 
 ---
 
@@ -158,6 +194,10 @@ https://www.fotografosicilia.com/contact/
 
 ## 8. Template .com
 
+Il template seguente usa la coppia SEO/geografica come esempio. Per i domini
+brand sostituire gli host con `salvonicolosiph.com` e `salvonicolosiph.it`
+quando la pagina appartiene al gruppo brand.
+
 ```html
 <link
     rel="canonical"
@@ -186,6 +226,10 @@ https://www.fotografosicilia.com/contact/
 ---
 
 ## 9. Template .it
+
+Il template seguente usa la coppia SEO/geografica come esempio. Per i domini
+brand sostituire gli host con `salvonicolosiph.com` e `salvonicolosiph.it`
+quando la pagina appartiene al gruppo brand.
 
 ```html
 <link

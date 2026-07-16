@@ -10,6 +10,8 @@ La struttura non deve essere modificata senza aggiornare la documentazione.
 
 ## 1. Root
 
+Struttura attuale:
+
 ```text
 fotografosicilia/
 ├── fotografosicilia.com/
@@ -21,7 +23,20 @@ fotografosicilia/
 
 La root contiene il progetto generale.
 
-Non rappresenta uno dei due siti pubblici.
+Non rappresenta uno dei domini pubblici.
+
+Le cartelle `fotografosicilia.com/` e `fotografosicilia.it/` rappresentano i
+domini SEO/geografici.
+
+I domini brand normali sono:
+
+```text
+salvonicolosiph.com
+salvonicolosiph.it
+```
+
+Se i domini brand vengono gestiti in questa repository, devono essere aggiunti
+come cartelle separate e documentati in questo file.
 
 ---
 
@@ -80,6 +95,12 @@ Rappresenta:
 https://www.fotografosicilia.com/
 ```
 
+Ruolo:
+
+```text
+dominio SEO/geografico in lingua inglese
+```
+
 Lingua:
 
 ```text
@@ -129,6 +150,12 @@ Rappresenta:
 
 ```text
 https://www.fotografosicilia.it/
+```
+
+Ruolo:
+
+```text
+dominio SEO/geografico in lingua italiana
 ```
 
 Lingua:
@@ -261,7 +288,7 @@ fotografosicilia.it/assets/
 
 ## 10. Indipendenza dei domini
 
-I due siti devono funzionare indipendentemente.
+I domini pubblici devono funzionare indipendentemente.
 
 Il `.it` non deve dipendere dagli assets del `.com`.
 
@@ -301,7 +328,7 @@ fotografosicilia.com/assets/css/style.css
 fotografosicilia.it/assets/css/style.css
 ```
 
-Le modifiche globali devono essere verificate su entrambi i domini.
+Le modifiche globali devono essere verificate sui domini interessati.
 
 ---
 

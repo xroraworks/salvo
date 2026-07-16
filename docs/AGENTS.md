@@ -7,10 +7,21 @@ Questa repository contiene il sito web fotografico statico di Salvo Nicolosi.
 Il sito è un progetto orientato all'acquisizione di nuovi clienti e al
 posizionamento professionale, non è soltanto un portfolio fotografico.
 
-La repository contiene due siti web correlati ma indipendenti:
+Il progetto distingue tra domini brand e domini SEO/geografici.
 
-- `fotografosicilia.com/` — sito in lingua inglese e dominio internazionale principale.
-- `fotografosicilia.it/` — sito in lingua italiana rivolto al mercato italiano.
+Domini brand:
+
+- `salvonicolosiph.com/` — dominio normale principale del brand in lingua inglese.
+- `salvonicolosiph.it/` — dominio normale del brand in lingua italiana.
+
+Domini SEO/geografici:
+
+- `fotografosicilia.com/` — dominio SEO/geografico in lingua inglese.
+- `fotografosicilia.it/` — dominio SEO/geografico in lingua italiana.
+
+La struttura attuale della repository contiene le cartelle dei domini SEO/geografici.
+I domini `fotografosicilia.*` non devono essere trattati come domini brand
+principali.
 
 Il progetto utilizza HTML, CSS e JavaScript puro.
 
@@ -105,12 +116,16 @@ completo del file.
 
 I siti `.com` e `.it` devono funzionare in maniera indipendente.
 
-Non creare dipendenze tra i due domini per CSS, JavaScript, immagini, font o
+Non creare dipendenze tra domini diversi per CSS, JavaScript, immagini, font o
 icone.
 
-Il sito `.com` deve utilizzare i propri assets.
+Ogni sito `.com` deve utilizzare i propri assets.
 
-Il sito `.it` deve utilizzare i propri assets.
+Ogni sito `.it` deve utilizzare i propri assets.
+
+Non trattare `fotografosicilia.com` come dominio brand:
+si tratta del dominio SEO/geografico inglese. I domini brand normali sono
+`salvonicolosiph.com` e `salvonicolosiph.it`.
 
 Non introdurre framework, librerie pesanti, sistemi di build o dipendenze
 esterne senza una reale necessità del progetto e senza che la modifica sia

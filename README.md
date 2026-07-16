@@ -23,30 +23,43 @@ Lo sviluppo viene realizzato con particolare attenzione a:
 
 ## Domini
 
-Il progetto comprende due siti web indipendenti ma strutturalmente collegati.
+Il progetto distingue tra domini brand e domini SEO/geografici.
 
-### Dominio principale
+### Domini brand
+
+`https://www.salvonicolosiph.com/`
+
+- Lingua: inglese
+- Dominio normale principale del brand
+- Versione di riferimento per la comunicazione diretta del fotografo
+
+`https://www.salvonicolosiph.it/`
+
+- Lingua: italiano
+- Dominio normale italiano del brand
+- Versione rivolta al pubblico italiano
+
+### Domini SEO/geografici
 
 `https://www.fotografosicilia.com/`
 
 - Lingua: inglese
-- Dominio principale del progetto
-- Versione internazionale del sito
-- Versione predefinita del progetto
-
-### Dominio italiano
+- Dominio SEO/geografico in lingua inglese
+- Supporta il posizionamento per ricerche legate a fotografo, Catania e Sicilia
 
 `https://www.fotografosicilia.it/`
 
 - Lingua: italiano
-- Versione italiana del sito
-- Rivolto principalmente al mercato italiano
+- Dominio SEO/geografico in lingua italiana
+- Supporta il posizionamento per ricerche italiane legate a fotografo, Catania e Sicilia
 
-Le pagine equivalenti presenti sui due domini devono essere collegate attraverso gli attributi `hreflang`.
+I domini `fotografosicilia.com` e `fotografosicilia.it` non sostituiscono i domini brand `salvonicolosiph.com` e `salvonicolosiph.it`.
 
-Ogni pagina indicizzabile deve utilizzare un URL canonical autoreferenziale verso il proprio URL definitivo.
+Le pagine equivalenti presenti sui domini devono essere collegate attraverso gli attributi `hreflang` quando fanno parte dello stesso gruppo linguistico.
 
-La versione `x-default` deve puntare alla pagina equivalente presente sul dominio principale `.com`.
+Ogni pagina indicizzabile deve utilizzare un URL canonical coerente con la strategia di pubblicazione scelta per quella pagina.
+
+Se una pagina viene pubblicata sia sui domini brand sia sui domini SEO/geografici, la relazione tra canonical, hreflang, contenuti distinti ed eventuali redirect deve essere documentata prima della pubblicazione.
 
 ---
 
@@ -58,11 +71,13 @@ La versione `x-default` deve puntare alla pagina equivalente presente sul domini
 
 **Area operativa principale:** Catania e Sicilia
 
-Il dominio `fotografosicilia.com` rappresenta il posizionamento geografico e professionale del progetto.
+I domini `salvonicolosiph.com` e `salvonicolosiph.it` rappresentano il brand diretto.
 
-Il brand principale del sito rimane **Salvo Nicolosi**.
+I domini `fotografosicilia.com` e `fotografosicilia.it` rappresentano il posizionamento geografico e SEO del progetto.
 
-Il dominio non deve sostituire il nome professionale del fotografo nella comunicazione del sito.
+Il brand principale rimane **Salvo Nicolosi**.
+
+I domini SEO/geografici non devono sostituire il nome professionale del fotografo nella comunicazione del sito.
 
 ---
 
@@ -105,7 +120,7 @@ L'aggiunta di nuovi servizi deve essere documentata e mantenuta coerente tra il 
 
 ## Struttura generale del progetto
 
-La repository contiene due siti web separati.
+La repository contiene attualmente due siti web separati per i domini SEO/geografici.
 
 ```text
 fotografosicilia/
@@ -116,15 +131,15 @@ fotografosicilia/
 └── README.md
 ```
 
-Il dominio `.com` e il dominio `.it` devono poter funzionare in maniera indipendente.
+Ogni dominio pubblico deve poter funzionare in maniera indipendente.
 
-La struttura dei due siti deve rimanere il più possibile speculare.
+La struttura delle versioni equivalenti deve rimanere il più possibile speculare.
 
 ---
 
 ## fotografosicilia.com
 
-La cartella `fotografosicilia.com` contiene la versione inglese e principale del sito.
+La cartella `fotografosicilia.com` contiene la versione inglese del dominio SEO/geografico.
 
 ```text
 fotografosicilia.com/
@@ -159,7 +174,7 @@ Le pagine principali iniziali sono:
 
 ## fotografosicilia.it
 
-La cartella `fotografosicilia.it` contiene la versione italiana del sito.
+La cartella `fotografosicilia.it` contiene la versione italiana del dominio SEO/geografico.
 
 ```text
 fotografosicilia.it/
@@ -324,11 +339,11 @@ contiene favicon, icone e altre risorse grafiche vettoriali o di interfaccia.
 
 ## Indipendenza dei domini
 
-Il dominio `.com` e il dominio `.it` devono poter funzionare indipendentemente.
+Ogni dominio deve poter funzionare indipendentemente.
 
-Il sito italiano non deve dipendere da CSS, JavaScript, immagini, font o icone caricati direttamente dal dominio `.com`.
+Un sito italiano non deve dipendere da CSS, JavaScript, immagini, font o icone caricati direttamente da un dominio inglese.
 
-Il sito inglese non deve dipendere dalle risorse presenti sul dominio `.it`.
+Un sito inglese non deve dipendere dalle risorse presenti su un dominio italiano.
 
 Esempio da evitare:
 
@@ -692,7 +707,7 @@ Prima di modificare la struttura generale, gli URL, i domini, il sistema bilingu
 
 Il progetto è attualmente in fase di sviluppo.
 
-La struttura principale dei due domini è stata definita.
+La struttura principale dei domini SEO/geografici è stata definita.
 
 Le pagine principali sono in fase di standardizzazione e sviluppo.
 

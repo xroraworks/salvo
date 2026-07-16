@@ -28,31 +28,35 @@ Area principale:
 Catania e Sicilia
 ```
 
-Dominio principale:
+Domini brand:
+
+```text
+https://www.salvonicolosiph.com/
+https://www.salvonicolosiph.it/
+```
+
+Ruolo:
+
+```text
+domini normali del brand Salvo Nicolosi PH
+```
+
+Domini SEO/geografici:
 
 ```text
 https://www.fotografosicilia.com/
-```
-
-Lingua:
-
-```text
-English
-```
-
-Dominio italiano:
-
-```text
 https://www.fotografosicilia.it/
 ```
 
-Lingua:
+Ruolo:
 
 ```text
-Italiano
+domini orientati al posizionamento per fotografo, Catania e Sicilia
 ```
 
-Il dominio rappresenta il posizionamento geografico.
+I domini `fotografosicilia.com` e `fotografosicilia.it` rappresentano il posizionamento geografico.
+
+I domini `salvonicolosiph.com` e `salvonicolosiph.it` rappresentano il brand diretto.
 
 Il brand comunicato rimane **Salvo Nicolosi**.
 
@@ -92,13 +96,25 @@ Le informazioni importanti non devono essere presenti soltanto nelle immagini.
 
 Non viene utilizzata una cartella `/en/`.
 
-Inglese:
+Brand inglese:
+
+```text
+https://www.salvonicolosiph.com/
+```
+
+Brand italiano:
+
+```text
+https://www.salvonicolosiph.it/
+```
+
+SEO/geografico inglese:
 
 ```text
 https://www.fotografosicilia.com/
 ```
 
-Italiano:
+SEO/geografico italiano:
 
 ```text
 https://www.fotografosicilia.it/
@@ -109,6 +125,16 @@ Le pagine equivalenti devono essere registrate in:
 ```text
 docs/url-map.md
 ```
+
+Quando una pagina esiste sia sui domini brand sia sui domini SEO/geografici,
+non deve essere pubblicata come duplicato non governato. Prima della
+pubblicazione deve essere scelta e documentata la strategia tra:
+
+- contenuto distinto per intento;
+- canonical verso la pagina principale scelta;
+- redirect;
+- gruppo hreflang separato per coppia di domini;
+- altra scelta SEO motivata.
 
 ---
 

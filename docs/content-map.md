@@ -52,9 +52,9 @@ Il sito si rivolge a:
 - brand;
 - persone che necessitano di uno shooting professionale.
 
-Il `.com` parla principalmente a un pubblico internazionale.
+Le versioni in lingua inglese parlano principalmente a un pubblico internazionale.
 
-Il `.it` parla principalmente al pubblico italiano.
+Le versioni in lingua italiana parlano principalmente al pubblico italiano.
 
 ---
 
@@ -767,7 +767,7 @@ Il messaggio deve essere coerente con i tempi reali di risposta.
 
 ## 45. Header
 
-`.com`:
+Versioni inglesi:
 
 ```text
 Home
@@ -778,7 +778,7 @@ Contact
 IT
 ```
 
-`.it`:
+Versioni italiane:
 
 ```text
 Home
