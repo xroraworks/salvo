@@ -1,13 +1,4 @@
 /* ==================================================
-   FONTS (fallbacks that stand in for the licensed
-   MonumentExtended / TTNormsPro / stratum-1-web files —
-   swap these @import + stack entries out once the real
-   font files are wired up on the live site)
-================================================== */
-
-@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap');
-
-/* ==================================================
    CSS VARIABLES
 ================================================== */
 
