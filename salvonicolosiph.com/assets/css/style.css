@@ -1125,3 +1125,346 @@ body.reveal-ready .eyebrow-bracket::after {
         white-space: normal;
     }
 }
+
+/* ==================================================
+   HERO
+================================================== */
+
+.hero {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    align-items: center;
+
+    width: min(100% - 64px, 1440px);
+    min-height: calc(100vh - var(--header-height));
+
+    margin-inline: auto;
+    padding-block: clamp(3rem, 6vw, 6rem);
+
+    overflow: hidden;
+}
+
+
+/* ==================================================
+   HERO CONTENT
+================================================== */
+
+.hero-content {
+    position: relative;
+    z-index: 20;
+
+    grid-column: 1 / 6;
+    grid-row: 1;
+
+    max-width: 610px;
+}
+
+.hero-overline {
+    margin-bottom: 1.25rem;
+
+    font-family: var(--font-accent);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    color: var(--color-orange);
+}
+
+.hero-title {
+    position: relative;
+    z-index: 20;
+
+    margin: 0 0 1.75rem;
+
+    color: var(--color-black);
+
+    font-size: clamp(3.8rem, 5.2vw, 5.9rem);
+    font-weight: 650;
+
+    line-height: 0.96;
+    letter-spacing: -0.03em;
+}
+
+.hero-description {
+    position: relative;
+    z-index: 20;
+
+    max-width: 470px;
+    margin: 0 0 2rem;
+
+    color: var(--color-black);
+
+    font-size: clamp(1rem, 1.2vw, 1.15rem);
+    line-height: 1.55;
+}
+
+.hero .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 52px;
+    padding: 14px 24px;
+
+    color: var(--color-white);
+    background-color: var(--color-orange);
+
+    font-weight: 700;
+    text-decoration: none;
+}
+
+
+/* ==================================================
+   HERO GALLERY
+================================================== */
+
+.hero-gallery {
+    position: relative;
+    z-index: 1;
+
+    grid-column: 5 / 13;
+    grid-row: 1;
+
+    width: 100%;
+    aspect-ratio: 16 / 9;
+
+    transform: translateX(30px);
+
+    margin: 0;
+    overflow: hidden;
+
+    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.08);
+}
+
+.hero-slider {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+}
+
+.hero-slide {
+    position: absolute;
+    inset: 0;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 0.5s ease,
+        visibility 0.5s ease;
+}
+
+.hero-slide.is-active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.hero-slide img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* ==================================================
+   HERO CONTROLS
+================================================== */
+
+.hero-controls {
+    position: absolute;
+    right: 2rem;
+    bottom: 2rem;
+
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    z-index: 5;
+}
+
+
+/* ==================================================
+   HERO ARROWS & COUNTER
+================================================== */
+
+.hero-arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 56px;
+    height: 56px;
+
+    padding: 0;
+
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    color: var(--color-white);
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.hero-arrow:hover {
+    border-color: var(--color-white);
+
+    background-color: var(--color-white);
+    color: var(--color-black);
+}
+
+.hero-arrow:focus-visible {
+    outline: 2px solid var(--color-white);
+    outline-offset: 3px;
+}
+
+.hero-counter {
+    color: var(--color-white);
+
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+}
+
+
+/* ==================================================
+   HERO RESPONSIVE — TABLET
+================================================== */
+
+@media (max-width: 1100px) {
+
+    .hero {
+        width: min(100% - 48px, 1100px);
+    }
+
+    .hero-content {
+        grid-column: 1 / 7;
+
+        max-width: 560px;
+    }
+
+    .hero-gallery {
+        grid-column: 6 / 13;
+
+        transform: translateX(20px);
+    }
+
+    .hero-title {
+        font-size: clamp(3.4rem, 6vw, 5rem);
+    }
+
+}
+
+
+/* ==================================================
+   HERO RESPONSIVE — MOBILE
+================================================== */
+
+@media (max-width: 900px) {
+
+    .hero {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 2.5rem;
+
+        width: min(100% - 40px, 720px);
+        min-height: auto;
+
+        padding-block: 3rem;
+        overflow: visible;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero-title {
+        font-size: clamp(3rem, 11vw, 4.8rem);
+        line-height: 0.95;
+    }
+
+    .hero-description {
+        max-width: 100%;
+    }
+
+    .hero-gallery {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+
+        transform: none;
+    }
+
+}
+
+
+/* ==================================================
+   HERO RESPONSIVE — SMALL MOBILE
+================================================== */
+
+@media (max-width: 560px) {
+
+    .hero {
+        width: min(100% - 28px, 520px);
+        gap: 2rem;
+
+        padding-block: 2.5rem;
+    }
+
+    .hero-overline {
+        margin-bottom: 1rem;
+
+        font-size: 0.7rem;
+        line-height: 1.5;
+    }
+
+    .hero-title {
+        margin-bottom: 1.4rem;
+
+        font-size: clamp(2.8rem, 13vw, 4rem);
+        letter-spacing: -0.04em;
+    }
+
+    .hero-description {
+        margin-bottom: 1.6rem;
+
+        font-size: 1rem;
+    }
+
+    .hero-gallery {
+        aspect-ratio: 4 / 3;
+    }
+
+    .hero-controls {
+        right: 1rem;
+        bottom: 1rem;
+
+        gap: 0.65rem;
+    }
+
+    .hero-arrow {
+        width: 44px;
+        height: 44px;
+    }
+
+    .hero-counter {
+        font-size: 0.75rem;
+        letter-spacing: 0.1em;
+    }
+
+}
