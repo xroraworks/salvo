@@ -1,12 +1,22 @@
 /* ==================================================
+   FONTS (fallbacks that stand in for the licensed
+   MonumentExtended / TTNormsPro / stratum-1-web files —
+   swap these @import + stack entries out once the real
+   font files are wired up on the live site)
+================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap');
+
+/* ==================================================
    CSS VARIABLES
 ================================================== */
 
 :root {
     /* Typography */
-    --font-heading: "MonumentExtended", "TTNormsPro", Arial, sans-serif;
-    --font-body: "TTNormsPro", Arial, Verdana, sans-serif;
-    --font-accent: "stratum-1-web", "TTNormsPro", Arial, sans-serif;
+    --font-heading: "MonumentExtended", "Unbounded", "TTNormsPro", Arial, sans-serif;
+    --font-body: "TTNormsPro", "Inter", Arial, Verdana, sans-serif;
+    --font-accent: "stratum-1-web", "TTNormsPro", "Inter", Arial, sans-serif;
+    --font-mono: "Space Mono", "Courier New", monospace;
 
     /* Colors */
     --color-black: #050505;
@@ -97,6 +107,21 @@ body {
     background-color: var(--color-paper);
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
+    position: relative;
+}
+
+/* Fine film-grain overlay — scoped to body.page-about so the
+   rest of the site is untouched */
+
+body.page-about::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    opacity: 0.05;
+    pointer-events: none;
+    mix-blend-mode: multiply;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
 /* ==================================================
@@ -426,42 +451,167 @@ body.menu-open .social-icon {
     opacity: 0.6;
     transform: translateY(-2px);
 }
+
 /* ==================================================
    ABOUT PAGE
 ================================================== */
 
 .about-container {
+    position: relative;
+    z-index: 2;
     width: min(100% - 64px, var(--container-width));
     margin-inline: auto;
 }
 
+/* ---- Hero ---- */
+
 .about-hero {
-    padding-block: clamp(72px, 11vw, 160px) clamp(56px, 8vw, 112px);
+    padding-block: clamp(72px, 11vw, 152px) clamp(48px, 7vw, 96px);
 }
 
-.about-eyebrow,
-.about-kicker {
-    margin-bottom: 18px;
-    font-family: var(--font-accent);
+.about-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 28px;
+    font-family: var(--font-mono);
     font-size: 0.78rem;
     font-weight: 700;
-    line-height: 1.2;
-    letter-spacing: 0;
+    letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--color-orange);
 }
 
-.about-hero h1 {
-    max-width: 900px;
-    margin-bottom: 32px;
-    font-size: clamp(4rem, 12vw, 11rem);
+.eyebrow-bracket {
+    position: relative;
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
 }
 
-.about-lead {
-    max-width: 900px;
-    font-size: clamp(1.25rem, 2.3vw, 2rem);
-    line-height: 1.25;
+.eyebrow-bracket::before,
+.eyebrow-bracket::after {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border: 1.5px solid var(--color-orange);
 }
+
+.eyebrow-bracket::before {
+    top: 0;
+    left: 0;
+    border-right: 0;
+    border-bottom: 0;
+}
+
+.eyebrow-bracket::after {
+    bottom: 0;
+    right: 0;
+    border-left: 0;
+    border-top: 0;
+}
+
+.page-title-label {
+    margin-bottom: 0;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+}
+
+.about-thesis {
+    max-width: 1000px;
+    margin-top: 18px;
+    margin-bottom: 40px;
+    font-family: var(--font-heading);
+    font-size: clamp(2.4rem, 6.2vw, 5.5rem);
+    font-weight: 700;
+    line-height: 1.02;
+    letter-spacing: -0.03em;
+    color: var(--color-black);
+}
+
+.about-intro {
+    max-width: 640px;
+}
+
+.about-intro p {
+    font-size: clamp(1.05rem, 1.3vw, 1.2rem);
+    color: var(--color-ink);
+}
+
+.about-intro p:first-child {
+    color: var(--color-muted);
+}
+
+/* ---- Contact-sheet strip (signature divider) ---- */
+
+.contact-strip {
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    border-block: 1px solid var(--color-border);
+    background-color: var(--color-soft-gray);
+}
+
+.contact-strip-track {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.contact-strip-frame {
+    position: relative;
+    aspect-ratio: 3 / 2;
+    border-right: 1px solid var(--color-border);
+    background:
+        radial-gradient(circle at 30% 20%, rgba(233, 76, 23, 0.16), transparent 55%),
+        linear-gradient(155deg, #1c1c1c 0%, #050505 60%);
+}
+
+.contact-strip-frame:last-child {
+    border-right: none;
+}
+
+.contact-strip-frame::before,
+.contact-strip-frame::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 10px;
+    height: 6px;
+    border-radius: 2px;
+    background-color: var(--color-soft-gray);
+    transform: translateX(-50%);
+}
+
+.contact-strip-frame::before {
+    top: -1px;
+}
+
+.contact-strip-frame::after {
+    bottom: -1px;
+}
+
+.contact-strip-frame span {
+    position: absolute;
+    bottom: 8px;
+    left: 10px;
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.05em;
+    color: rgba(255, 255, 255, 0.55);
+}
+
+.contact-strip-frame:nth-child(3) {
+    background:
+        radial-gradient(circle at 65% 70%, rgba(233, 76, 23, 0.5), transparent 60%),
+        linear-gradient(155deg, #1c1c1c 0%, #050505 60%);
+}
+
+/* ---- Section rhythm ---- */
 
 .about-section {
     padding-block: clamp(56px, 8vw, 104px);
@@ -470,14 +620,37 @@ body.menu-open .social-icon {
 
 .about-grid {
     display: grid;
-    grid-template-columns: minmax(220px, 0.8fr) minmax(0, 1.2fr);
+    grid-template-columns: minmax(200px, 0.7fr) minmax(0, 1.3fr);
     gap: clamp(32px, 6vw, 96px);
+}
+
+.exposure-tag {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 6px;
+    margin-bottom: 20px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--color-border);
+    font-family: var(--font-mono);
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: var(--color-orange);
+}
+
+.exposure-tag span {
+    font-size: 0.72rem;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-muted);
 }
 
 .about-section h2,
 .about-cta h2 {
-    max-width: 760px;
-    font-size: clamp(2.2rem, 5vw, 5.8rem);
+    max-width: 720px;
+    font-size: clamp(2rem, 4.4vw, 4.6rem);
 }
 
 .about-copy p,
@@ -485,10 +658,55 @@ body.menu-open .social-icon {
     font-size: clamp(1.05rem, 1.4vw, 1.25rem);
 }
 
+/* ---- Pull quote ---- */
+
+.pull-quote {
+    position: relative;
+    padding-block: clamp(72px, 10vw, 128px);
+    color: var(--color-white);
+    background-color: var(--color-black);
+    border-top: 1px solid var(--color-border);
+}
+
+.pull-quote-mark {
+    margin-bottom: 8px;
+    font-family: var(--font-heading);
+    font-size: clamp(3rem, 6vw, 5rem);
+    line-height: 1;
+    color: var(--color-orange);
+}
+
+.pull-quote-text {
+    max-width: 1000px;
+    margin-bottom: 0;
+    font-family: var(--font-heading);
+    font-size: clamp(1.6rem, 3.6vw, 3.4rem);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+}
+
+/* ---- CTA ---- */
+
 .about-cta {
+    position: relative;
     padding-block: clamp(72px, 10vw, 144px);
     color: var(--color-white);
     background-color: var(--color-black);
+    border-top: 1px solid var(--color-border);
+}
+
+.about-cta-frame {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-orange);
 }
 
 .button-primary {
@@ -512,6 +730,38 @@ body.menu-open .social-icon {
     transform: translateY(-2px);
 }
 
+/* ---- Scroll reveal (progressive enhancement) ---- */
+
+[data-reveal] {
+    opacity: 1;
+    transform: none;
+}
+
+body.reveal-ready [data-reveal] {
+    opacity: 0;
+    transform: translateY(28px);
+    transition:
+        opacity 700ms ease,
+        transform 700ms ease;
+}
+
+body.reveal-ready [data-reveal].is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ---- Focus-point breathing dot in the eyebrow bracket ---- */
+
+body.reveal-ready .eyebrow-bracket::before,
+body.reveal-ready .eyebrow-bracket::after {
+    animation: focus-breathe 3.2s ease-in-out infinite;
+}
+
+@keyframes focus-breathe {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.35; }
+}
+
 /* ==================================================
    RESPONSIVE
 ================================================== */
@@ -527,10 +777,13 @@ body.menu-open .social-icon {
         gap: 18px;
     }
 
-    .about-hero h1 {
-        font-size: clamp(3.4rem, 18vw, 5.5rem);
+    .contact-strip-track {
+        grid-template-columns: repeat(3, 1fr);
     }
 
+    .contact-strip-frame:nth-child(n+4) {
+        display: none;
+    }
 }
 
 /* ==================================================
