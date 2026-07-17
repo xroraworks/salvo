@@ -347,3 +347,109 @@ body.menu-open {
     opacity: 0.6;
     transform: translateY(-2px);
 }
+/* ==================================================
+   ABOUT PAGE
+================================================== */
+
+.about-container {
+    width: min(100% - 64px, var(--container-width));
+    margin-inline: auto;
+}
+
+.about-hero {
+    padding-block: clamp(72px, 11vw, 160px) clamp(56px, 8vw, 112px);
+}
+
+.about-eyebrow,
+.about-kicker {
+    margin-bottom: 18px;
+    font-family: var(--font-accent);
+    font-size: 0.78rem;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    color: var(--color-orange);
+}
+
+.about-hero h1 {
+    max-width: 900px;
+    margin-bottom: 32px;
+    font-size: clamp(4rem, 12vw, 11rem);
+}
+
+.about-lead {
+    max-width: 900px;
+    font-size: clamp(1.25rem, 2.3vw, 2rem);
+    line-height: 1.25;
+}
+
+.about-section {
+    padding-block: clamp(56px, 8vw, 104px);
+    border-top: 1px solid var(--color-border);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: minmax(220px, 0.8fr) minmax(0, 1.2fr);
+    gap: clamp(32px, 6vw, 96px);
+}
+
+.about-section h2,
+.about-cta h2 {
+    max-width: 760px;
+    font-size: clamp(2.2rem, 5vw, 5.8rem);
+}
+
+.about-copy p,
+.about-cta p {
+    font-size: clamp(1.05rem, 1.4vw, 1.25rem);
+}
+
+.about-cta {
+    padding-block: clamp(72px, 10vw, 144px);
+    color: var(--color-white);
+    background-color: var(--color-black);
+}
+
+.button-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 52px;
+    margin-top: 24px;
+    padding: 14px 22px;
+    font-weight: 700;
+    color: var(--color-white);
+    background-color: var(--color-orange);
+    transition:
+        background-color var(--transition-fast),
+        transform var(--transition-fast);
+}
+
+.button-primary:hover,
+.button-primary:focus-visible {
+    background-color: var(--color-orange-dark);
+    transform: translateY(-2px);
+}
+
+/* ==================================================
+   RESPONSIVE
+================================================== */
+
+@media (max-width: 760px) {
+
+    .about-container {
+        width: min(100% - 40px, var(--container-width));
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .about-hero h1 {
+        font-size: clamp(3.4rem, 18vw, 5.5rem);
+    }
+
+}
