@@ -639,7 +639,7 @@ body.menu-open .social-icon {
 .about-hero-layout {
     display: grid;
     grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.72fr);
-    align-items: end;
+    align-items: start;
     gap: clamp(40px, 7vw, 112px);
 }
 
@@ -707,6 +707,11 @@ body.menu-open .social-icon {
 
 .about-hero-visual {
     position: relative;
+    margin-top: clamp(12px, 3vw, 48px);
+}
+
+.about-hero-visual-mobile {
+    display: none;
 }
 
 .about-image {
@@ -889,6 +894,15 @@ body.reveal-ready .eyebrow-bracket::after {
 
     .about-hero-content {
         padding-bottom: 0;
+    }
+
+    .about-hero-visual-desktop {
+        display: none;
+    }
+
+    .about-hero-visual-mobile {
+        display: block;
+        margin-block: 28px 30px;
     }
 
     .about-thesis {
