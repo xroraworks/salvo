@@ -47,18 +47,32 @@
 }
 
 html {
+    font-size: 100%;
+    background-color: var(--color-paper);
+    overflow-x: hidden;
     scroll-behavior: smooth;
 }
 
 body {
+    min-height: 100vh;
     margin: 0;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--color-ink);
+    background-color: var(--color-paper);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    position: relative;
 }
 
 img,
 svg {
     display: block;
     max-width: 100%;
-}   
+}
 
 button,
 input,
@@ -76,29 +90,6 @@ button {
 a {
     color: inherit;
     text-decoration: none;
-}
-
-/* ==================================================
-   GLOBAL
-================================================== */
-
-html {
-    font-size: 100%;
-    background-color: var(--color-paper);
-}
-
-body {
-    min-height: 100vh;
-    margin: 0;
-    font-family: var(--font-body);
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.6;
-    color: var(--color-ink);
-    background-color: var(--color-paper);
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    position: relative;
 }
 
 /* Fine film-grain overlay — scoped to body.page-about so the
@@ -139,13 +130,15 @@ h6 {
     font-family: var(--font-heading);
     font-weight: 700;
     line-height: 1.05;
-    letter-spacing: -0.03em;
+    letter-spacing: 0;
     text-wrap: balance;
+    overflow-wrap: break-word;
 }
 
 p {
     margin-bottom: 1.25em;
     max-width: 70ch;
+    overflow-wrap: break-word;
 }
 
 strong {
@@ -256,7 +249,7 @@ small {
     font-size: clamp(2.5rem, 7vw, 6.5rem);
     font-weight: 700;
     line-height: 0.95;
-    letter-spacing: -0.04em;
+    letter-spacing: 0;
     text-align: center;
 
     opacity: 0;
@@ -294,6 +287,14 @@ small {
 
 .menu-toggle {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 6px;
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
     z-index: calc(var(--z-menu) + 1);
 }
 
@@ -340,19 +341,6 @@ body.menu-open {
    HEADER ELEMENTS
 ================================================== */
 
-/* Menu toggle */
-
-.menu-toggle {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 6px;
-    width: 44px;
-    height: 44px;
-    cursor: pointer;
-}
-
 .menu-toggle-line {
     display: block;
     width: 28px;
@@ -371,7 +359,6 @@ body.menu-open {
 /* Site logo */
 
 .site-logo {
-    position: relative;
     display: block;
     justify-self: center;
     line-height: 0;
@@ -454,25 +441,6 @@ body.menu-open .social-icon {
     margin-inline: auto;
 }
 
-/* ---- Hero ---- */
-
-.about-hero {
-    padding-block: clamp(72px, 11vw, 152px) clamp(48px, 7vw, 96px);
-}
-
-.about-eyebrow {
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 28px;
-    font-family: var(--font-mono);
-    font-size: 0.78rem;
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--color-orange);
-}
-
 .eyebrow-bracket {
     position: relative;
     width: 14px;
@@ -513,54 +481,22 @@ body.menu-open .social-icon {
     color: var(--color-muted);
 }
 
-.about-thesis {
-    max-width: 1000px;
-    margin-top: 18px;
-    margin-bottom: 40px;
-    font-family: var(--font-heading);
-    font-size: clamp(2.4rem, 6.2vw, 5.5rem);
-    font-weight: 700;
-    line-height: 1.02;
-    letter-spacing: -0.03em;
-    color: var(--color-black);
-}
-
-.about-intro {
-    max-width: 640px;
-}
-
-.about-intro p {
-    font-size: clamp(1.05rem, 1.3vw, 1.2rem);
-    color: var(--color-ink);
-}
-
 .about-intro p:first-child {
     color: var(--color-muted);
 }
 
 /* ---- Section rhythm ---- */
 
-.about-section {
-    padding-block: clamp(56px, 8vw, 104px);
-    border-top: 1px solid var(--color-border);
-}
-
-.about-grid {
-    display: grid;
-    grid-template-columns: minmax(200px, 0.7fr) minmax(0, 1.3fr);
-    gap: clamp(32px, 6vw, 96px);
-}
-
 .exposure-tag {
     display: inline-flex;
     flex-wrap: wrap;
     align-items: baseline;
-    gap: 6px;
-    margin-bottom: 20px;
+    gap: 8px;
+    margin-bottom: 22px;
     padding-bottom: 14px;
     border-bottom: 1px solid var(--color-border);
     font-family: var(--font-mono);
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     font-weight: 700;
     letter-spacing: 0.02em;
     color: var(--color-orange);
@@ -574,17 +510,6 @@ body.menu-open .social-icon {
     color: var(--color-muted);
 }
 
-.about-section h2,
-.about-cta h2 {
-    max-width: 720px;
-    font-size: clamp(2rem, 4.4vw, 4.6rem);
-}
-
-.about-copy p,
-.about-cta p {
-    font-size: clamp(1.05rem, 1.4vw, 1.25rem);
-}
-
 /* ---- CTA ---- */
 
 .about-cta {
@@ -593,19 +518,6 @@ body.menu-open .social-icon {
     color: var(--color-white);
     background-color: var(--color-black);
     border-top: 1px solid var(--color-border);
-}
-
-.about-cta-frame {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 20px;
-    font-family: var(--font-mono);
-    font-size: 0.78rem;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--color-orange);
 }
 
 .button-primary {
@@ -629,7 +541,7 @@ body.menu-open .social-icon {
     transform: translateY(-2px);
 }
 
-/* ---- About refinement ---- */
+/* ---- About layout ---- */
 
 .about-hero {
     padding-block: clamp(56px, 8vw, 112px) clamp(48px, 7vw, 96px);
@@ -755,12 +667,6 @@ body.menu-open .social-icon {
 
 .about-section-heading {
     align-self: start;
-}
-
-.exposure-tag {
-    gap: 8px;
-    margin-bottom: 22px;
-    font-size: 0.9rem;
 }
 
 .about-section h2,
@@ -1055,7 +961,7 @@ body.reveal-ready .eyebrow-bracket::after {
     font-size: clamp(1.7rem, 3.4vw, 3.8rem);
     font-weight: 600;
     line-height: 1.05;
-    letter-spacing: -0.04em;
+    letter-spacing: 0;
 }
 
 .footer-description {
@@ -1319,7 +1225,7 @@ body.reveal-ready .eyebrow-bracket::after {
     font-weight: 650;
 
     line-height: 0.96;
-    letter-spacing: -0.03em;
+    letter-spacing: 0;
 }
 
 .hero-description {
@@ -1589,7 +1495,7 @@ body.reveal-ready .eyebrow-bracket::after {
 
         font-size: clamp(3rem, 9vw, 4.8rem);
         line-height: 0.98;
-        letter-spacing: -0.025em;
+        letter-spacing: 0;
     }
 
     .hero-description {
@@ -1653,7 +1559,7 @@ body.reveal-ready .eyebrow-bracket::after {
 
         font-size: clamp(2.55rem, 12vw, 3.8rem);
         line-height: 0.98;
-        letter-spacing: -0.03em;
+        letter-spacing: 0;
     }
 
 
@@ -1828,7 +1734,7 @@ body.reveal-ready .eyebrow-bracket::after {
     font-size: clamp(2.55rem, 12vw, 3.8rem);
     font-weight: 650;
     line-height: 1;
-    letter-spacing: -0.035em;
+    letter-spacing: 0;
 }
 
 
@@ -1940,7 +1846,7 @@ body.reveal-ready .eyebrow-bracket::after {
     .home-intro-title {
         font-size: clamp(2.35rem, 11vw, 3.5rem);
         line-height: 1.02;
-        letter-spacing: -0.03em;
+        letter-spacing: 0;
     }
 
     .home-intro-content p {
@@ -2011,7 +1917,7 @@ body.reveal-ready .eyebrow-bracket::after {
     font-size: clamp(2.7rem, 5vw, 5.2rem);
     font-weight: 650;
     line-height: 1;
-    letter-spacing: -0.035em;
+    letter-spacing: 0;
 }
 
 .home-services-description {
@@ -2236,7 +2142,7 @@ body.reveal-ready .eyebrow-bracket::after {
     font-size: clamp(1.45rem, 2vw, 2.4rem);
     font-weight: 700;
     line-height: 1.05;
-    letter-spacing: -0.025em;
+    letter-spacing: 0;
 }
 
 
@@ -2433,7 +2339,7 @@ body.reveal-ready .eyebrow-bracket::after {
         min-height: 42px;
 
         font-size: 0.7rem;
-        letter-spacing: -0.01em;
+        letter-spacing: 0;
     }
 
     .service-card {
