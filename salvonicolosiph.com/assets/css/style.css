@@ -1296,8 +1296,8 @@ body.reveal-ready .eyebrow-bracket::after {
     visibility: hidden;
 
     transition:
-        opacity 0.5s ease,
-        visibility 0.5s ease;
+        opacity 0.15s ease,
+        visibility 0.15s ease;
 }
 
 .hero-slide.is-active {
@@ -2395,3 +2395,446 @@ body.reveal-ready .eyebrow-bracket::after {
         transform: none;
     }
 }
+<<<<<<< HEAD
+=======
+
+/* ==================================================
+   FINAL CTA
+================================================== */
+
+.home-cta {
+    position: relative;
+
+    min-height: clamp(680px, 82vh, 900px);
+    padding-block: clamp(6rem, 9vw, 9rem);
+
+    display: flex;
+    align-items: center;
+
+    background-color: var(--color-paper);
+
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.home-cta-container {
+    position: relative;
+    z-index: 2;
+
+    width: min(100% - 64px, var(--container-width));
+    margin-inline: auto;
+}
+
+.home-cta-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: min(100%, 760px);
+    margin-inline: auto;
+
+    text-align: center;
+}
+
+/* ==================================================
+   CTA SPLIT PHOTOS
+================================================== */
+
+.home-cta-photo {
+    position: absolute;
+    top: clamp(3rem, 6vw, 6rem);
+    bottom: clamp(3rem, 6vw, 6rem);
+    z-index: 1;
+
+    width: clamp(280px, 28vw, 480px);
+
+    overflow: hidden;
+
+    background-color: #d9d5ce;
+}
+
+.home-cta-photo-left {
+    left: 0;
+}
+
+.home-cta-photo-right {
+    right: 0;
+}
+
+.home-cta-photo img {
+    position: absolute;
+    top: 0;
+
+    width: 200%;
+    max-width: none;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform 900ms cubic-bezier(.2, .7, .2, 1),
+        filter 500ms ease;
+}
+
+/*
+La fotografia completa è larga il doppio del contenitore.
+
+Nel pannello sinistro mostriamo la metà sinistra.
+*/
+
+.home-cta-photo-left img {
+    left: 0;
+    object-position: left center;
+}
+
+/*
+Nel pannello destro spostiamo la stessa fotografia verso sinistra
+per mostrare la seconda metà.
+*/
+
+.home-cta-photo-right img {
+    right: 0;
+    object-position: right center;
+}
+
+/* ==================================================
+   CTA PHOTO INNER FADES
+================================================== */
+
+.home-cta-photo::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    z-index: 1;
+
+    pointer-events: none;
+}
+
+.home-cta-photo-left::after {
+    background:
+        linear-gradient(
+            90deg,
+            rgba(250,248,244,0) 72%,
+            rgba(250,248,244,.15) 80%,
+            rgba(250,248,244,.45) 88%,
+            rgba(250,248,244,.82) 95%,
+            var(--color-paper) 100%
+        );
+}
+
+.home-cta-photo-right::after {
+    background:
+        linear-gradient(
+            270deg,
+            rgba(250,248,244,0) 72%,
+            rgba(250,248,244,.15) 80%,
+            rgba(250,248,244,.45) 88%,
+            rgba(250,248,244,.82) 95%,
+            var(--color-paper) 100%
+        );
+}
+
+/* ==================================================
+   CTA LABEL
+================================================== */
+
+.home-cta-label {
+    margin-bottom: 1.5rem;
+
+    color: var(--color-orange);
+
+    font-family: var(--font-accent);
+    font-size: 0.72rem;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+
+/* ==================================================
+   CTA TITLE
+================================================== */
+
+.home-cta-title {
+    max-width: 760px;
+    margin: 0;
+
+    color: var(--color-black);
+
+    font-size: clamp(3.3rem, 5.6vw, 6.4rem);
+    font-weight: 650;
+    line-height: 0.94;
+    letter-spacing: -0.045em;
+
+    text-wrap: balance;
+}
+
+
+/* ==================================================
+   CTA TEXT
+================================================== */
+
+.home-cta-text {
+    max-width: 600px;
+    margin-top: 2rem;
+    margin-bottom: 0;
+
+    color: var(--color-muted);
+
+    font-size: clamp(1rem, 1.15vw, 1.13rem);
+    line-height: 1.75;
+}
+
+/* ==================================================
+   CTA BUTTON
+================================================== */
+
+.home-cta-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.85rem;
+
+    min-height: 52px;
+    margin-top: 2.75rem;
+    padding: 0.9rem 1.6rem;
+
+    color: var(--color-white);
+    background-color: var(--color-orange);
+
+    border: 1px solid var(--color-orange);
+
+    font-size: 0.9rem;
+    font-weight: 700;
+    line-height: 1;
+
+    transition:
+        color 250ms ease,
+        background-color 250ms ease,
+        border-color 250ms ease,
+        transform 250ms ease;
+}
+
+.home-cta-button svg {
+    width: 18px;
+    height: 18px;
+
+    transition: transform 250ms ease;
+}
+
+.home-cta-button:hover {
+    color: var(--color-white);
+    background-color: var(--color-black);
+    border-color: var(--color-black);
+
+    transform: translateY(-2px);
+}
+
+.home-cta-button:hover svg {
+    transform: translateX(4px);
+}
+
+.home-cta-button:focus-visible {
+    outline: 2px solid var(--color-black);
+    outline-offset: 5px;
+}
+
+
+/* ==================================================
+   CTA LOCATION
+================================================== */
+
+.home-cta-location {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.65rem;
+
+    margin-top: 2rem;
+    margin-bottom: 0;
+
+    color: var(--color-muted);
+
+    font-size: 0.72rem;
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+/* ==================================================
+   CTA PHOTOS HOVER
+================================================== */
+
+.home-cta:hover .home-cta-photo-left img {
+    transform: scale(1.025) translateX(0.5%);
+}
+
+.home-cta:hover .home-cta-photo-right img {
+    transform: scale(1.025) translateX(-0.5%);
+}
+
+.home-cta:hover .home-cta-photo img {
+    filter:
+        saturate(0.94)
+        contrast(1.02);
+}
+
+/* ==================================================
+   FINAL CTA RESPONSIVE — TABLET
+================================================== */
+
+@media (max-width: 1100px) {
+
+    .home-cta {
+        min-height: 720px;
+        padding-block: 6rem;
+    }
+
+    .home-cta-container {
+        width: min(100% - 48px, 1000px);
+    }
+
+    .home-cta-content {
+        width: min(100%, 650px);
+    }
+
+    .home-cta-photo {
+        width: clamp(130px, 17vw, 210px);
+    }
+
+    .home-cta-title {
+        max-width: 650px;
+
+        font-size: clamp(3rem, 7vw, 5.3rem);
+    }
+
+    .home-cta-text {
+        max-width: 520px;
+    }
+}
+
+/* ==================================================
+   FINAL CTA RESPONSIVE — MOBILE
+================================================== */
+
+@media (max-width: 760px) {
+
+    .home-cta {
+        min-height: auto;
+        padding-block: 4.75rem 0;
+
+        display: block;
+    }
+
+    .home-cta-container {
+        width: min(100% - 40px, 620px);
+    }
+
+    .home-cta-content {
+        width: 100%;
+    }
+
+    .home-cta-title {
+        max-width: 600px;
+
+        font-size: clamp(2.75rem, 11vw, 4.6rem);
+        line-height: 0.98;
+    }
+
+    .home-cta-text {
+        max-width: 520px;
+        margin-top: 1.5rem;
+    }
+
+    .home-cta-button {
+        margin-top: 2.25rem;
+    }
+
+    .home-cta-location {
+        margin-top: 1.75rem;
+    }
+
+
+    /* Hide right photograph */
+
+    .home-cta-photo-right {
+        display: none;
+    }
+
+
+    /* Convert left photograph into a full-width image */
+
+    .home-cta-photo-left {
+        position: relative;
+        top: auto;
+        bottom: auto;
+        left: auto;
+
+        width: 100%;
+        height: clamp(320px, 75vw, 520px);
+        margin-top: 3.5rem;
+    }
+
+    .home-cta-photo-left img {
+        position: static;
+
+        width: 100%;
+        height: 100%;
+
+        object-position: center;
+    }
+
+    .home-cta-photo-left::after {
+        display: none;
+    }
+
+    .home-cta:hover .home-cta-photo-left img {
+        transform: none;
+    }
+}
+
+/* ==================================================
+   FINAL CTA RESPONSIVE — SMALL MOBILE
+================================================== */
+
+@media (max-width: 480px) {
+
+    .home-cta {
+        padding-top: 4rem;
+    }
+
+    .home-cta-container {
+        width: min(100% - 28px, 440px);
+    }
+
+    .home-cta-title {
+        font-size: clamp(2.4rem, 12vw, 3.55rem);
+    }
+
+    .home-cta-text {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    .home-cta-button {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .home-cta-location {
+        flex-wrap: wrap;
+
+        font-size: 0.64rem;
+    }
+
+    .home-cta-photo-left {
+        height: 115vw;
+        max-height: 500px;
+        margin-top: 3rem;
+    }
+}
+>>>>>>> 1aafa02 (feat: intro and services section rettifica)
