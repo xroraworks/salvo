@@ -2836,3 +2836,408 @@ per mostrare la seconda metà.
     }
 }
 
+/* ==================================================
+   CONTACT PAGE
+================================================== */
+
+/* ==================================================
+   CONTACT HERO
+================================================== */
+
+.contact-hero {
+    display: flex;
+    align-items: center;
+
+    min-height: calc(100vh - var(--header-height, 100px));
+    padding-block: clamp(7rem, 10vw, 10rem);
+
+    overflow: hidden;
+    background-color: var(--color-paper);;
+}
+
+.contact-hero-container {
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(360px, 0.78fr);
+    align-items: center;
+    gap: clamp(4rem, 8vw, 8rem);
+
+    width: min(100% - 3rem, 1440px);
+    margin-inline: auto;
+}
+
+/* ==================================================
+   CONTACT CONTENT
+================================================== */
+
+.contact-hero-content {
+    position: relative;
+    z-index: 1;
+
+    max-width: 720px;
+}
+
+.contact-eyebrow {
+    margin: 0 0 1.5rem;
+
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+}
+
+.contact-title {
+    max-width: 760px;
+    margin: 0;
+
+    font-size: clamp(3rem, 5.8vw, 6.8rem);
+    font-weight: 400;
+    line-height: 0.98;
+    letter-spacing: -0.045em;
+
+    text-wrap: balance;
+}
+
+.contact-description {
+    max-width: 610px;
+    margin: clamp(2rem, 3.5vw, 3rem) 0 0;
+
+    font-size: clamp(1rem, 1.25vw, 1.2rem);
+    line-height: 1.75;
+}
+
+.contact-intro {
+    margin: clamp(2rem, 3vw, 2.75rem) 0 0;
+
+    font-size: clamp(1.1rem, 1.5vw, 1.4rem);
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.contact-note {
+    max-width: 560px;
+    margin: clamp(2rem, 3vw, 2.75rem) 0 0;
+
+    font-size: 0.85rem;
+    line-height: 1.7;
+    opacity: 0.65;
+}
+
+/* ==================================================
+   CONTACT ACTIONS
+================================================== */
+
+.contact-actions {
+    display: flex;
+    align-items: center;
+    gap: clamp(1.75rem, 3vw, 3rem);
+
+    margin-top: clamp(1.75rem, 3vw, 2.5rem);
+}
+
+/* ==================================================
+   WHATSAPP BUTTON
+================================================== */
+
+.contact-whatsapp-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 58px;
+    padding: 1rem 1.75rem;
+
+    color: #ffffff;
+    background-color: #111111;
+    border: 1px solid #111111;
+    border-radius: 999px;
+
+    font-size: 0.9rem;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: 0.06em;
+    text-decoration: none;
+    text-transform: uppercase;
+    white-space: nowrap;
+
+    transition:
+        color 250ms ease,
+        background-color 250ms ease,
+        box-shadow 250ms ease,
+        transform 250ms ease;
+}
+
+.contact-whatsapp-button:hover {
+    color: #111111;
+    background-color: transparent;
+
+    box-shadow: 0 14px 34px rgb(0 0 0 / 12%);
+    transform: translateY(-3px);
+}
+
+.contact-whatsapp-button:active {
+    transform: translateY(-1px);
+}
+
+.contact-whatsapp-button:focus-visible {
+    outline: 3px solid currentColor;
+    outline-offset: 5px;
+}
+
+/* ==================================================
+   EMAIL
+================================================== */
+
+.contact-email-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+}
+
+.contact-email-label {
+    font-size: 0.72rem;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+
+    opacity: 0.58;
+}
+
+.contact-email {
+    position: relative;
+
+    display: inline-block;
+
+    color: inherit;
+
+    font-size: clamp(0.95rem, 1.15vw, 1.1rem);
+    line-height: 1.4;
+    text-decoration: none;
+}
+
+.contact-email::after {
+    position: absolute;
+    right: 0;
+    bottom: -0.35rem;
+    left: 0;
+
+    height: 1px;
+
+    background-color: currentColor;
+    content: "";
+
+    transform: scaleX(1);
+    transform-origin: right center;
+
+    transition: transform 250ms ease;
+}
+
+.contact-email:hover::after {
+    transform: scaleX(0);
+}
+
+.contact-email:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 5px;
+}
+
+/* ==================================================
+   CONTACT IMAGE
+================================================== */
+
+.contact-hero-media {
+    position: relative;
+
+    min-width: 0;
+    margin: 0;
+}
+
+.contact-hero-media::before {
+    position: absolute;
+    z-index: 1;
+    top: -1.25rem;
+    right: -1.25rem;
+
+    width: clamp(5rem, 8vw, 8rem);
+    aspect-ratio: 1;
+
+    border-top: 1px solid rgb(17 17 17 / 30%);
+    border-right: 1px solid rgb(17 17 17 / 30%);
+
+    content: "";
+    pointer-events: none;
+}
+
+.contact-hero-image {
+    display: block;
+
+    width: 100%;
+    height: clamp(580px, 70vw, 820px);
+
+    object-fit: cover;
+    object-position: center;
+
+    background-color: #eeeeee;
+}
+
+/* ==================================================
+   LARGE SCREENS
+================================================== */
+
+@media (min-width: 1600px) {
+
+    .contact-hero-container {
+        width: min(100% - 6rem, 1560px);
+    }
+
+}
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 1024px) {
+
+    .contact-hero {
+        min-height: auto;
+        padding-block: 8rem 6rem;
+    }
+
+    .contact-hero-container {
+        grid-template-columns:
+            minmax(0, 1fr)
+            minmax(300px, 0.75fr);
+        gap: 4rem;
+    }
+
+    .contact-title {
+        font-size: clamp(3.2rem, 7vw, 5.2rem);
+    }
+
+    .contact-actions {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.75rem;
+    }
+
+    .contact-hero-image {
+        height: clamp(520px, 68vw, 700px);
+    }
+
+}
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 767px) {
+
+    .contact-hero {
+        padding-block: 7rem 5rem;
+    }
+
+    .contact-hero-container {
+        grid-template-columns: 1fr;
+        gap: 3.5rem;
+
+        width: min(100% - 2rem, 640px);
+    }
+
+    .contact-hero-content {
+        max-width: none;
+    }
+
+    .contact-title {
+        font-size: clamp(2.75rem, 13vw, 4.5rem);
+        line-height: 1;
+    }
+
+    .contact-description {
+        margin-top: 1.75rem;
+
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    .contact-intro {
+        margin-top: 1.75rem;
+
+        font-size: 1.15rem;
+    }
+
+    .contact-actions {
+        width: 100%;
+        margin-top: 1.5rem;
+    }
+
+    .contact-whatsapp-button {
+        width: 100%;
+        min-height: 60px;
+    }
+
+    .contact-email-wrapper {
+        width: 100%;
+    }
+
+    .contact-note {
+        margin-top: 2rem;
+    }
+
+    .contact-hero-media {
+        order: -1;
+    }
+
+    .contact-hero-image {
+        height: min(125vw, 620px);
+    }
+
+}
+
+/* ==================================================
+   SMALL MOBILE
+================================================== */
+
+@media (max-width: 420px) {
+
+    .contact-hero-container {
+        width: min(100% - 1.5rem, 640px);
+    }
+
+    .contact-title {
+        font-size: clamp(2.5rem, 13vw, 3.6rem);
+    }
+
+    .contact-whatsapp-button {
+        padding-inline: 1.25rem;
+
+        font-size: 0.82rem;
+    }
+
+    .contact-email {
+        font-size: 0.95rem;
+        overflow-wrap: anywhere;
+    }
+
+}
+
+/* ==================================================
+   REDUCED MOTION
+================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .contact-whatsapp-button,
+    .contact-email::after {
+        transition: none;
+    }
+
+    .contact-whatsapp-button:hover,
+    .contact-whatsapp-button:active {
+        transform: none;
+    }
+
+}
