@@ -515,6 +515,31 @@ COME RICHIEDERE INFORMAZIONI
 
 ---
 
+### 29.1 Architettura delle pagine inglesi
+
+`/services/` resta la pagina indice e collega sei pagine principali:
+
+- Private Events;
+- Corporate Events;
+- Restaurants & Businesses;
+- Social Content;
+- Studio Photography;
+- Video.
+
+La Home inglese collega inoltre gli approfondimenti dedicati a matrimoni,
+diciottesimi, compleanni, feste familiari, festival, eventi culturali ed
+eventi commerciali.
+
+Ogni pagina di dettaglio contiene:
+
+- una presentazione sintetica del servizio;
+- destinatari, copertura, metodo e consegna;
+- disponibilita geografica;
+- servizi correlati;
+- CTA per richiedere un preventivo.
+
+---
+
 ## 30. Prezzi
 
 La pubblicazione dei prezzi non è obbligatoria.

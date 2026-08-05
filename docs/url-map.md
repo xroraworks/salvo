@@ -148,6 +148,42 @@ https://www.fotografosicilia.com/services/
 
 ---
 
+### 5.1 Pagine servizi del dominio brand inglese
+
+La pagina seguente rimane l'indice generale dei servizi:
+
+```text
+https://www.salvonicolosiph.com/services/
+```
+
+Pagine principali collegate dall'indice:
+
+```text
+https://www.salvonicolosiph.com/services/private-events/
+https://www.salvonicolosiph.com/services/corporate-events/
+https://www.salvonicolosiph.com/services/restaurants-businesses/
+https://www.salvonicolosiph.com/services/social-content/
+https://www.salvonicolosiph.com/services/studio-photography/
+https://www.salvonicolosiph.com/services/video/
+```
+
+Approfondimenti collegati dalla Home inglese:
+
+```text
+https://www.salvonicolosiph.com/services/weddings/
+https://www.salvonicolosiph.com/services/eighteenth-birthdays/
+https://www.salvonicolosiph.com/services/birthdays/
+https://www.salvonicolosiph.com/services/family-celebrations/
+https://www.salvonicolosiph.com/services/festivals/
+https://www.salvonicolosiph.com/services/cultural-events/
+https://www.salvonicolosiph.com/services/commercial-events/
+```
+
+Questa fase riguarda solamente il dominio inglese. Le pagine equivalenti
+italiane non sono ancora previste nell'implementazione corrente.
+
+---
+
 ## 6. Portfolio
 
 English:
