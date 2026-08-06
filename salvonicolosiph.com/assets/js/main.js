@@ -357,3 +357,58 @@ if (servicesSwitch) {
     });
 
 }
+
+/* ==================================================
+   PROJECT GALLERY TOGGLE
+================================================== */
+
+const initProjectGalleryToggle = () => {
+    const toggleButton = document.querySelector("[data-gallery-toggle]");
+    const hiddenGallery = document.querySelector("#project-gallery-more");
+
+    if (!toggleButton || !hiddenGallery) {
+        return;
+    }
+
+    const label = toggleButton.querySelector(
+        ".project-gallery-toggle-label"
+    );
+
+    toggleButton.addEventListener("click", () => {
+        const isExpanded =
+            toggleButton.getAttribute("aria-expanded") === "true";
+
+        toggleButton.setAttribute(
+            "aria-expanded",
+            String(!isExpanded)
+        );
+
+        if (isExpanded) {
+            hiddenGallery.hidden = true;
+            hiddenGallery.classList.remove("is-visible");
+
+            if (label) {
+                label.textContent = "View all photographs";
+            }
+
+            toggleButton.scrollIntoView({
+                behavior: "smooth",
+                block: "center"
+            });
+
+            return;
+        }
+
+        hiddenGallery.hidden = false;
+
+        requestAnimationFrame(() => {
+            hiddenGallery.classList.add("is-visible");
+        });
+
+        if (label) {
+            label.textContent = "Show fewer photographs";
+        }
+    });
+};
+
+initProjectGalleryToggle();
