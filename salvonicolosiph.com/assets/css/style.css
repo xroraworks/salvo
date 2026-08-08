@@ -2849,7 +2849,9 @@ per mostrare la seconda metà.
     align-items: center;
 
     min-height: calc(100vh - var(--header-height, 100px));
-    padding-block: clamp(7rem, 10vw, 10rem);
+    
+    padding-top: clamp(7rem, 10vw, 10rem);
+    padding-bottom: clamp(4rem, 6vw, 5rem);
 
     overflow: hidden;
     background-color: var(--color-paper);;
@@ -5886,6 +5888,575 @@ body.page-service-detail .service-detail-contact .service-detail-button:focus-vi
 
         padding-top: 1.5rem;
 
+    }
+
+}
+
+/* ==================================================
+   CONTACT DIVIDER
+================================================== */
+
+.contact-divider {
+
+    width: min(100% - 64px, 1200px);
+    height: 1px;
+
+    margin-top: 3.5rem;
+    margin-bottom: 1rem;
+
+    margin-inline: auto;
+
+    background-color: rgb(17 17 17 / 10%);
+
+}
+
+@media (max-width: 767px) {
+
+    .contact-divider {
+
+        width: min(100% - 32px, 640px);
+
+    }
+
+}
+
+@media (max-width: 420px) {
+
+    .contact-divider {
+
+        width: min(100% - 24px, 420px);
+
+    }
+
+}
+
+/* ==================================================
+   CONTACT FAQ
+================================================== */
+
+.contact-faq {
+    padding-block: clamp(7rem, 11vw, 11rem);
+
+    background-color: var(--color-paper);
+}
+
+.contact-faq-container {
+    width: min(100% - 64px, 1200px);
+    margin-inline: auto;
+}
+
+
+/* ==================================================
+   CONTACT FAQ HEADER
+================================================== */
+
+.contact-faq-header {
+    display: grid;
+    grid-template-columns:
+        minmax(0, 0.75fr)
+        minmax(0, 1.25fr);
+    gap: clamp(3rem, 7vw, 8rem);
+
+    margin-bottom: clamp(4rem, 7vw, 7rem);
+}
+
+.contact-faq-eyebrow {
+    margin: 0;
+
+    color: var(--color-orange);
+
+    font-family: var(--font-accent);
+    font-size: 0.7rem;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.contact-faq-title {
+    max-width: 760px;
+    margin: 0;
+
+    color: var(--color-black);
+
+    font-size: clamp(2.8rem, 5vw, 5.5rem);
+    font-weight: 650;
+    line-height: 0.96;
+    letter-spacing: -0.045em;
+
+    text-wrap: balance;
+}
+
+.contact-faq-description {
+    grid-column: 2;
+
+    max-width: 580px;
+    margin: 0.75rem 0 0;
+
+    color: var(--color-muted);
+
+    font-size: clamp(1rem, 1.2vw, 1.15rem);
+    line-height: 1.7;
+}
+
+
+/* ==================================================
+   CONTACT FAQ LIST
+================================================== */
+
+.contact-faq-list {
+    border-top: 1px solid rgb(17 17 17 / 14%);
+}
+
+.contact-faq-item {
+    border-bottom: 1px solid rgb(17 17 17 / 14%);
+}
+
+
+/* ==================================================
+   CONTACT FAQ QUESTION
+================================================== */
+
+.contact-faq-question {
+    position: relative;
+
+    display: grid;
+    grid-template-columns:
+        72px
+        minmax(0, 1fr)
+        48px;
+    align-items: center;
+    gap: 1.5rem;
+
+    width: 100%;
+    min-height: 118px;
+    padding: 1.5rem 0;
+
+    color: var(--color-black);
+    background: transparent;
+
+    border: 0;
+
+    text-align: left;
+
+    cursor: pointer;
+}
+
+.contact-faq-number {
+    color: rgb(17 17 17 / 24%);
+
+    font-family: var(--font-accent);
+    font-size: clamp(1.8rem, 2.5vw, 2.6rem);
+    font-weight: 500;
+    line-height: 1;
+
+    transition: color 250ms ease;
+}
+
+.contact-faq-question-text {
+    max-width: 780px;
+
+    font-size: clamp(1.35rem, 2.1vw, 2rem);
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: -0.025em;
+
+    transition:
+        color 250ms ease,
+        transform 300ms cubic-bezier(.2, .7, .2, 1);
+}
+
+
+/* ==================================================
+   CONTACT FAQ ICON
+================================================== */
+
+.contact-faq-icon {
+    position: relative;
+
+    width: 34px;
+    height: 34px;
+
+    justify-self: end;
+}
+
+.contact-faq-icon-line {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    display: block;
+
+    width: 18px;
+    height: 1px;
+
+    background-color: currentColor;
+
+    transform: translate(-50%, -50%);
+
+    transition:
+        transform 350ms cubic-bezier(.2, .7, .2, 1),
+        background-color 250ms ease;
+}
+
+.contact-faq-icon-line--vertical {
+    transform:
+        translate(-50%, -50%)
+        rotate(90deg);
+}
+
+
+/* ==================================================
+   CONTACT FAQ HOVER
+================================================== */
+
+.contact-faq-question:hover {
+    color: var(--color-orange);
+}
+
+.contact-faq-question:hover .contact-faq-number {
+    color: var(--color-orange);
+}
+
+.contact-faq-question:hover .contact-faq-question-text {
+    transform: translateX(6px);
+}
+
+.contact-faq-question:focus-visible {
+    outline: 2px solid var(--color-orange);
+    outline-offset: 6px;
+}
+
+
+/* ==================================================
+   CONTACT FAQ OPEN STATE
+================================================== */
+
+.contact-faq-question[aria-expanded="true"] {
+    color: var(--color-orange);
+}
+
+.contact-faq-question[aria-expanded="true"]
+.contact-faq-number {
+    color: var(--color-orange);
+}
+
+.contact-faq-question[aria-expanded="true"]
+.contact-faq-icon-line--vertical {
+    transform:
+        translate(-50%, -50%)
+        rotate(0deg);
+}
+
+
+/* ==================================================
+   CONTACT FAQ ANSWER
+================================================== */
+
+.contact-faq-answer {
+    overflow: hidden;
+}
+
+.contact-faq-answer-inner {
+    display: grid;
+    grid-template-columns:
+        72px
+        minmax(0, 1fr)
+        48px;
+    gap: 1.5rem;
+
+    padding:
+        0
+        0
+        clamp(2.5rem, 4vw, 4rem);
+}
+
+.contact-faq-answer-inner p {
+    grid-column: 2;
+
+    max-width: 720px;
+    margin: 0;
+
+    color: var(--color-muted);
+
+    font-size: clamp(1rem, 1.15vw, 1.12rem);
+    line-height: 1.8;
+}
+
+
+/* ==================================================
+   CONTACT FAQ REVEAL
+================================================== */
+
+.contact-faq-answer.is-opening {
+    animation: contact-faq-open 420ms cubic-bezier(.2, .7, .2, 1);
+}
+
+@keyframes contact-faq-open {
+
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+/* ==================================================
+   CONTACT FAQ — TABLET
+================================================== */
+
+@media (max-width: 1024px) {
+
+    .contact-faq {
+        padding-block: 7rem;
+    }
+
+    .contact-faq-container {
+        width: min(100% - 48px, 960px);
+    }
+
+    .contact-faq-header {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+
+        margin-bottom: 4rem;
+    }
+
+    .contact-faq-description {
+        grid-column: auto;
+        margin-top: 0;
+    }
+
+    .contact-faq-question {
+        grid-template-columns:
+            56px
+            minmax(0, 1fr)
+            40px;
+
+        min-height: 104px;
+        gap: 1.2rem;
+    }
+
+    .contact-faq-answer-inner {
+        grid-template-columns:
+            56px
+            minmax(0, 1fr)
+            40px;
+
+        gap: 1.2rem;
+    }
+
+}
+
+
+/* ==================================================
+   CONTACT FAQ — MOBILE
+================================================== */
+
+@media (max-width: 767px) {
+
+    .contact-faq {
+        padding-block: 5.5rem;
+    }
+
+    .contact-faq-container {
+        width: min(100% - 32px, 640px);
+    }
+
+    .contact-faq-header {
+        margin-bottom: 3rem;
+    }
+
+    .contact-faq-eyebrow {
+        font-size: 0.66rem;
+    }
+
+    .contact-faq-title {
+        font-size: clamp(2.6rem, 11vw, 4rem);
+        line-height: 0.98;
+    }
+
+    .contact-faq-description {
+        max-width: 520px;
+
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    .contact-faq-question {
+        grid-template-columns:
+            40px
+            minmax(0, 1fr)
+            32px;
+
+        min-height: 92px;
+        gap: 0.9rem;
+
+        padding-block: 1.35rem;
+    }
+
+    .contact-faq-number {
+        font-size: 1.35rem;
+    }
+
+    .contact-faq-question-text {
+        font-size: clamp(1.2rem, 5vw, 1.55rem);
+        line-height: 1.25;
+    }
+
+    .contact-faq-icon {
+        width: 28px;
+        height: 28px;
+    }
+
+    .contact-faq-icon-line {
+        width: 15px;
+    }
+
+    .contact-faq-answer-inner {
+        grid-template-columns:
+            40px
+            minmax(0, 1fr)
+            32px;
+
+        gap: 0.9rem;
+
+        padding-bottom: 2.5rem;
+    }
+
+    .contact-faq-answer-inner p {
+        font-size: 0.98rem;
+        line-height: 1.75;
+    }
+
+}
+
+
+/* ==================================================
+   CONTACT FAQ — SMALL MOBILE
+================================================== */
+
+@media (max-width: 480px) {
+
+    .contact-faq {
+        padding-block: 4.5rem;
+    }
+
+    .contact-faq-container {
+        width: min(100% - 24px, 440px);
+    }
+
+    .contact-faq-header {
+        gap: 1.1rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .contact-faq-title {
+        font-size: clamp(2.4rem, 12vw, 3.5rem);
+    }
+
+    .contact-faq-question {
+        grid-template-columns:
+            30px
+            minmax(0, 1fr)
+            28px;
+
+        min-height: 82px;
+        gap: 0.75rem;
+
+        padding-block: 1.2rem;
+    }
+
+    .contact-faq-number {
+        font-size: 1.1rem;
+    }
+
+    .contact-faq-question-text {
+        font-size: 1.15rem;
+    }
+
+    .contact-faq-icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    .contact-faq-icon-line {
+        width: 14px;
+    }
+
+    .contact-faq-answer-inner {
+        grid-template-columns:
+            30px
+            minmax(0, 1fr)
+            28px;
+
+        gap: 0.75rem;
+
+        padding-bottom: 2.2rem;
+    }
+
+    .contact-faq-answer-inner p {
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+
+}
+
+
+/* ==================================================
+   CONTACT FAQ — VERY SMALL MOBILE
+================================================== */
+
+@media (max-width: 360px) {
+
+    .contact-faq-container {
+        width: min(100% - 20px, 340px);
+    }
+
+    .contact-faq-question {
+        grid-template-columns:
+            26px
+            minmax(0, 1fr)
+            24px;
+
+        gap: 0.6rem;
+    }
+
+    .contact-faq-answer-inner {
+        grid-template-columns:
+            26px
+            minmax(0, 1fr)
+            24px;
+
+        gap: 0.6rem;
+    }
+
+    .contact-faq-question-text {
+        font-size: 1.05rem;
+    }
+
+}
+
+
+/* ==================================================
+   CONTACT FAQ — REDUCED MOTION
+================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .contact-faq-question-text,
+    .contact-faq-number,
+    .contact-faq-icon-line {
+        transition: none;
+    }
+
+    .contact-faq-answer.is-opening {
+        animation: none;
     }
 
 }

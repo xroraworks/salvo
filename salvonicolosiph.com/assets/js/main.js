@@ -412,3 +412,63 @@ const initProjectGalleryToggle = () => {
 };
 
 initProjectGalleryToggle();
+
+/* ==================================================
+   CONTACT FAQ
+================================================== */
+
+const initContactFaq = () => {
+
+    const faqQuestions = document.querySelectorAll(
+        ".contact-faq-question"
+    );
+
+    if (!faqQuestions.length) {
+        return;
+    }
+
+    faqQuestions.forEach((question) => {
+
+        question.addEventListener("click", () => {
+
+            const answerId =
+                question.getAttribute("aria-controls");
+
+            const answer =
+                document.getElementById(answerId);
+
+            if (!answer) {
+                return;
+            }
+
+            const isExpanded =
+                question.getAttribute("aria-expanded") === "true";
+
+            question.setAttribute(
+                "aria-expanded",
+                String(!isExpanded)
+            );
+
+            if (isExpanded) {
+
+                answer.hidden = true;
+                answer.classList.remove("is-opening");
+
+                return;
+            }
+
+            answer.hidden = false;
+
+            answer.classList.remove("is-opening");
+
+            requestAnimationFrame(() => {
+                answer.classList.add("is-opening");
+            });
+
+        });
+
+    });
+
+};
+
+initContactFaq();
