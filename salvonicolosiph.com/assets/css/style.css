@@ -665,6 +665,15 @@ body.menu-open .social-icon {
     gap: clamp(40px, 7vw, 112px);
 }
 
+.about-section--reverse .about-section-heading {
+    grid-column: 2;
+}
+
+.about-section--reverse .about-copy {
+    grid-column: 1;
+    grid-row: 1;
+}
+
 .about-section-heading {
     align-self: start;
 }
@@ -682,6 +691,49 @@ body.menu-open .social-icon {
 .about-cta p {
     font-size: clamp(1.05rem, 1.4vw, 1.25rem);
     line-height: 1.72;
+}
+
+.about-copy {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: clamp(28px, 4vw, 54px) 0;
+    counter-reset: about-fragment;
+}
+
+.about-copy p {
+    position: relative;
+    grid-column: 1 / 11;
+    margin: 0;
+    padding-top: 18px;
+    border-top: 1px solid var(--color-border);
+    counter-increment: about-fragment;
+    text-wrap: pretty;
+}
+
+.about-copy p:nth-child(even) {
+    grid-column: 3 / 13;
+}
+
+.about-copy p::before {
+    content: "0" counter(about-fragment);
+    position: absolute;
+    top: -0.62em;
+    left: 0;
+    padding-right: 10px;
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    line-height: 1;
+    letter-spacing: 0.08em;
+    color: var(--color-orange);
+    background: var(--color-white);
+}
+
+.about-section--reverse .about-copy p {
+    grid-column: 2 / 13;
+}
+
+.about-section--reverse .about-copy p:nth-child(even) {
+    grid-column: 1 / 10;
 }
 
 .about-statement {
@@ -790,6 +842,23 @@ body.reveal-ready .eyebrow-bracket::after {
     .about-grid {
         grid-template-columns: 1fr;
         gap: 18px;
+    }
+
+    .about-section--reverse .about-section-heading,
+    .about-section--reverse .about-copy {
+        grid-column: 1;
+        grid-row: auto;
+    }
+
+    .about-copy {
+        gap: 34px;
+    }
+
+    .about-copy p,
+    .about-copy p:nth-child(even),
+    .about-section--reverse .about-copy p,
+    .about-section--reverse .about-copy p:nth-child(even) {
+        grid-column: 1 / 13;
     }
 
     .about-hero-layout,
