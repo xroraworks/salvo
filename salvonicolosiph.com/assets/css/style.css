@@ -574,7 +574,6 @@ body.menu-open .social-icon {
 
 .about-hero {
     padding-block: clamp(56px, 8vw, 112px) clamp(48px, 7vw, 96px);
-    border-top: 1px solid var(--color-border);
 }
 
 .about-hero-layout {
@@ -685,7 +684,6 @@ body.menu-open .social-icon {
 
 .about-section {
     padding-block: clamp(72px, 9vw, 132px);
-    border-top: 1px solid var(--color-border);
 }
 
 .about-grid {
@@ -1002,6 +1000,35 @@ body.reveal-ready .eyebrow-bracket::after {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
     }
+}
+
+/* ==================================================
+   GLOBAL SECTION DIVIDER
+================================================== */
+
+.section-divider {
+    width: min(100% - 90px, 1200px);
+    height: 1px;
+
+    margin-inline: auto;
+
+    background-color: rgba(0, 0, 0, 0.12);
+}
+
+@media (max-width: 900px) {
+
+    .section-divider {
+        width: calc(100% - 64px);
+    }
+
+}
+
+@media (max-width: 620px) {
+
+    .section-divider {
+        width: calc(100% - 40px);
+    }
+
 }
 
 /* ==================================================
@@ -4270,7 +4297,6 @@ body.page-services .services-page-hero {
     position: relative;
     padding-block: clamp(64px, 8vw, 128px) clamp(80px, 10vw, 156px);
     overflow: hidden;
-    border-top: 1px solid var(--color-border);
 }
 
 body.page-services .services-page-hero::after {
