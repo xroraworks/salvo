@@ -1327,6 +1327,27 @@ body.reveal-ready .eyebrow-bracket::after {
         gap: 0.75rem 1.5rem;
         white-space: normal;
     }
+
+}
+
+.footer-cookie-settings {
+    margin: 0;
+    padding: 0;
+
+    border: 0;
+    background: transparent;
+
+    color: inherit;
+    font: inherit;
+    line-height: inherit;
+
+    text-align: left;
+    text-decoration: inherit;
+
+    cursor: pointer;
+
+    appearance: none;
+    -webkit-appearance: none;
 }
 
 /* ==================================================
