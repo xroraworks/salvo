@@ -739,18 +739,6 @@ body.menu-open .social-icon {
     border-radius: 2px;
 }
 
-.about-hero-visual figcaption {
-    max-width: 340px;
-    margin-top: 14px;
-    margin-left: auto;
-    font-family: var(--font-mono);
-    font-size: 0.7rem;
-    line-height: 1.45;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    color: var(--color-muted);
-}
-
 .about-section {
     padding-block: clamp(72px, 9vw, 132px);
     border-top: 1px solid var(--color-border);
@@ -1339,6 +1327,27 @@ body.reveal-ready .eyebrow-bracket::after {
         gap: 0.75rem 1.5rem;
         white-space: normal;
     }
+
+}
+
+.footer-cookie-settings {
+    margin: 0;
+    padding: 0;
+
+    border: 0;
+    background: transparent;
+
+    color: inherit;
+    font: inherit;
+    line-height: inherit;
+
+    text-align: left;
+    text-decoration: inherit;
+
+    cursor: pointer;
+
+    appearance: none;
+    -webkit-appearance: none;
 }
 
 /* ==================================================

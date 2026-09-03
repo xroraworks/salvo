@@ -93,27 +93,64 @@
         <script type="application/ld+json">
         {
             "@context": "https://schema.org",
-            "@type": "Service",
-            "name": "Photography and video services in Sicily",
-            "url": "https://www.salvonicolosiph.com/services/",
-            "description": "Photography and video services for private events, companies, restaurants, brands and social communication in Catania and across Sicily.",
-            "provider": {
-                "@type": "Person",
-                "name": "Salvo Nicolosi",
-                "url": "https://www.salvonicolosiph.com/"
-            },
-            "areaServed": [
-                "Catania",
-                "Sicily",
-                "Italy"
-            ],
-            "serviceType": [
-                "Private event photography",
-                "Corporate event photography",
-                "Restaurant and business photography",
-                "Social media content",
-                "Studio photography",
-                "Video content"
+            "@graph": [
+                {
+                    "@type": "Person",
+                    "@id": "https://www.salvonicolosiph.com/#person",
+                    "name": "Salvo Nicolosi",
+                    "url": "https://www.salvonicolosiph.com/",
+                    "image": {
+                        "@type": "ImageObject",
+                        "@id": "https://www.salvonicolosiph.com/#person-image",
+                        "url": "https://www.salvonicolosiph.com/assets/images/about/salvo-nicolosi-about-portrait-color.avif"
+                    },
+                    "jobTitle": "Photographer",
+                    "description": "Professional photographer based in Catania, Sicily, working across private events, public events and commercial photography.",
+                    "email": "mailto:info@salvonicolosiph.com",
+                    "sameAs": [
+                        "https://www.instagram.com/salvonicolosi.ph/",
+                        "https://www.facebook.com/salvonicolosiphotographer",
+                        "https://www.linkedin.com/in/salvonicolosi/"
+                    ],
+                    "worksFor": {
+                        "@id": "https://www.salvonicolosiph.com/#business"
+                    }
+                },
+                {
+                    "@type": [
+                        "ProfessionalService",
+                        "LocalBusiness"
+                    ],
+                    "@id": "https://www.salvonicolosiph.com/#business",
+                    "name": "Salvo Nicolosi Photography",
+                    "url": "https://www.salvonicolosiph.com/",
+                    "image": {
+                        "@id": "https://www.salvonicolosiph.com/#person-image"
+                    },
+                    "founder": {
+                        "@id": "https://www.salvonicolosiph.com/#person"
+                    },
+                    "email": "mailto:info@salvonicolosiph.com",
+                    "areaServed": [
+                        {
+                            "@type": "City",
+                            "name": "Catania"
+                        },
+                        {
+                            "@type": "AdministrativeArea",
+                            "name": "Sicily"
+                        },
+                        {
+                            "@type": "Country",
+                            "name": "Italy"
+                        }
+                    ],
+                    "sameAs": [
+                        "https://www.instagram.com/salvonicolosi.ph/",
+                        "https://www.facebook.com/salvonicolosiphotographer",
+                        "https://www.linkedin.com/in/salvonicolosi/"
+                    ]
+                }
             ]
         }
         </script>
@@ -296,6 +333,15 @@
 
         </header>
 
+        <!-- ==================================================
+            DIVIDER
+        ================================================== -->
+
+        <div
+            class="section-divider"
+            aria-hidden="true"
+        ></div>
+
         <main id="main-content">
 
             <section
@@ -337,15 +383,15 @@
                 aria-labelledby="services-intro-title"
             >
                 <div class="services-page-container services-page-intro-inner">
-                    <h2 id="services-intro-title">
-                        One point of view, shaped for different needs.
-                    </h2>
-
-                    <p>
+                     <p>
                         From a family celebration to a commercial campaign, every assignment
                         begins with listening. The approach, pace and final images are built
                         around the people, place and purpose of the project.
                     </p>
+ 
+                    <h2 id="services-intro-title">
+                        One point of view, shaped for different needs.
+                    </h2>
                 </div>
             </section>
 
@@ -572,71 +618,71 @@
                 </div>
             </section>
 
-<section
-    class="services-contact"
-    aria-labelledby="services-contact-title"
->
-
-    <div class="services-page-container services-contact-layout">
-
-        <div>
-            <h2 id="services-contact-title">
-                Have a project in mind?
-            </h2>
-
-            <p>
-                Tell me what you are planning, where it will happen and how
-                you would like the images or video to be used.
-            </p>
-        </div>
-
-        <div class="services-contact-actions">
-
-            <a
-                class="button-primary services-contact-button"
-                href="../contact/"
+            <section
+                class="services-contact"
+                aria-labelledby="services-contact-title"
             >
-                Tell me about your project
-            </a>
 
-            <a
-                class="services-contact-link"
-                href="../portfolio/"
-            >
-                View the portfolio
-            </a>
+                <div class="services-page-container services-contact-layout">
 
-        </div>
+                    <div>
+                        <h2 id="services-contact-title">
+                            Have a project in mind?
+                        </h2>
 
-    </div>
+                        <p>
+                            Tell me what you are planning, where it will happen and how
+                            you would like the images or video to be used.
+                        </p>
+                    </div>
 
-    <!-- ==================================================
-         BACK TO TOP
-    ================================================== -->
+                    <div class="services-contact-actions">
 
-    <div class="back-to-top back-to-top--services">
+                        <a
+                            class="button-primary services-contact-button"
+                            href="../contact/"
+                        >
+                            Tell me about your project
+                        </a>
 
-        <div class="back-to-top-container">
+                        <a
+                            class="services-contact-link"
+                            href="../portfolio/"
+                        >
+                            View the portfolio
+                        </a>
 
-            <a
-                class="back-to-top-link"
-                href="#top"
-            >
-                Back to top
+                    </div>
 
-                <span
-                    class="back-to-top-arrow"
-                    aria-hidden="true"
-                >
-                    ↑
-                </span>
-            </a>
+                </div>
 
-        </div>
+                <!-- ==================================================
+                    BACK TO TOP
+                ================================================== -->
 
-    </div>
+                <div class="back-to-top back-to-top--services">
 
-</section>
+                    <div class="back-to-top-container">
+
+                        <a
+                            class="back-to-top-link"
+                            href="#top"
+                        >
+                            Back to top
+
+                            <span
+                                class="back-to-top-arrow"
+                                aria-hidden="true"
+                            >
+                                ↑
+                            </span>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </section>
 
         </main>
 
@@ -806,12 +852,317 @@
                         >
                             Cookie Policy
                         </a>
+
+                        <button
+                            class="footer-legal-link footer-cookie-settings"
+                            type="button"
+                            data-cookie-settings
+                        >
+                            Cookie Settings
+                        </button>
+                    
                     </nav>
 
                 </div>
 
             </div>
         </footer>
+
+        <!-- ==================================================
+            COOKIE CONSENT
+        ================================================== -->
+
+        <div
+            class="cookie-consent"
+            id="cookie-consent"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="cookie-consent-title"
+            aria-describedby="cookie-consent-description"
+            hidden
+        >
+
+            <!-- ==================================================
+                INITIAL VIEW
+            ================================================== -->
+
+            <div
+                class="cookie-consent-panel"
+                data-cookie-view="main"
+            >
+
+                <div class="cookie-consent-header">
+
+                    <p class="cookie-consent-eyebrow">
+                        Cookie settings
+                    </p>
+
+                    <h2
+                        class="cookie-consent-title"
+                        id="cookie-consent-title"
+                    >
+                        Your privacy,<br>
+                        your choice.
+                    </h2>
+
+                </div>
+
+
+                <div class="cookie-consent-body">
+
+                    <p
+                        class="cookie-consent-description"
+                        id="cookie-consent-description"
+                    >
+                        We use necessary cookies to make this website work.
+                        With your permission, we may also use analytics and
+                        marketing technologies to understand website usage
+                        and improve advertising.
+                    </p>
+
+
+                    <div class="cookie-consent-links">
+
+                        <a href="../cookie-policy/index.html">
+                            Cookie Policy
+                        </a>
+
+                        <a href="../privacy-policy/index.html">
+                            Privacy Policy
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="cookie-consent-actions">
+
+                    <button
+                        class="cookie-button cookie-button--text"
+                        type="button"
+                        data-cookie-customize
+                    >
+                        Customize
+                    </button>
+
+                    <button
+                        class="cookie-button cookie-button--secondary"
+                        type="button"
+                        data-cookie-reject
+                    >
+                        Reject non-essential
+                    </button>
+
+                    <button
+                        class="cookie-button cookie-button--primary"
+                        type="button"
+                        data-cookie-accept
+                    >
+                        Accept all
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- ==================================================
+                PREFERENCES VIEW
+            ================================================== -->
+
+            <div
+                class="cookie-consent-panel cookie-consent-preferences"
+                data-cookie-view="preferences"
+                hidden
+            >
+
+                <div class="cookie-consent-header">
+
+                    <button
+                        class="cookie-preferences-back"
+                        type="button"
+                        data-cookie-back
+                        aria-label="Back to cookie settings"
+                    >
+                        ← Back
+                    </button>
+
+                    <p class="cookie-consent-eyebrow">
+                        Cookie preferences
+                    </p>
+
+                    <h2 class="cookie-consent-title">
+                        Choose what<br>
+                        you allow.
+                    </h2>
+
+                </div>
+
+
+                <div class="cookie-preferences-list">
+
+
+                    <!-- Necessary -->
+
+                    <div class="cookie-preference">
+
+                        <div class="cookie-preference-content">
+
+                            <div class="cookie-preference-heading">
+
+                                <h3>
+                                    Necessary
+                                </h3>
+
+                                <span class="cookie-preference-required">
+                                    Always active
+                                </span>
+
+                            </div>
+
+                            <p>
+                                Required for the website to function and
+                                to remember your privacy preferences.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Analytics -->
+
+                    <div class="cookie-preference">
+
+                        <div class="cookie-preference-content">
+
+                            <div class="cookie-preference-heading">
+
+                                <div>
+
+                                    <h3>
+                                        Analytics
+                                    </h3>
+
+                                    <p>
+                                        Helps us understand how visitors use
+                                        the website and measure its performance.
+                                    </p>
+
+                                </div>
+
+
+                                <label class="cookie-toggle">
+
+                                    <input
+                                        type="checkbox"
+                                        data-cookie-analytics
+                                    >
+
+                                    <span
+                                        class="cookie-toggle-control"
+                                        aria-hidden="true"
+                                    ></span>
+
+                                    <span class="sr-only">
+                                        Allow analytics cookies
+                                    </span>
+
+                                </label>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Marketing -->
+
+                    <div class="cookie-preference">
+
+                        <div class="cookie-preference-content">
+
+                            <div class="cookie-preference-heading">
+
+                                <div>
+
+                                    <h3>
+                                        Marketing
+                                    </h3>
+
+                                    <p>
+                                        Used for advertising measurement,
+                                        remarketing and personalised advertising.
+                                    </p>
+
+                                </div>
+
+
+                                <label class="cookie-toggle">
+
+                                    <input
+                                        type="checkbox"
+                                        data-cookie-marketing
+                                    >
+
+                                    <span
+                                        class="cookie-toggle-control"
+                                        aria-hidden="true"
+                                    ></span>
+
+                                    <span class="sr-only">
+                                        Allow marketing cookies
+                                    </span>
+
+                                </label>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="cookie-consent-links">
+
+                    <a href="../cookie-policy/index.html">
+                        Cookie Policy
+                    </a>
+
+                    <a href="../privacy-policy/index.html">
+                        Privacy Policy
+                    </a>
+
+                </div>
+
+
+                <div class="cookie-consent-actions cookie-consent-actions--preferences">
+
+                    <button
+                        class="cookie-button cookie-button--secondary"
+                        type="button"
+                        data-cookie-reject
+                    >
+                        Reject non-essential
+                    </button>
+
+                    <button
+                        class="cookie-button cookie-button--primary"
+                        type="button"
+                        data-cookie-save
+                    >
+                        Save preferences
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
 
     </body>
 

@@ -374,6 +374,15 @@
 
     </header>
 
+    <!-- ================================================== 
+            DIVIDER
+    ================================================== --> 
+
+        <div
+            class="section-divider"
+            aria-hidden="true"
+        ></div>
+
     <main>
 
     <!-- ==================================================
@@ -403,9 +412,9 @@
                     </h1>
 
                     <p class="project-hero-description">
-                        A grand opening story shaped by genuine emotions,
-                        elegant details and the spontaneous moments shared
-                        by Antonio and the people closest to him.
+                        An automotive opening defined by cars,
+                        workshop details and the people gathered
+                        to discover the new Barone Gomme space.
                     </p>
 
                     <dl class="project-details">
@@ -500,14 +509,14 @@
                     <div class="project-introduction-copy">
                         <p>
                             The Barone Gomme Grand Opening brought together cars, people
-                            and a newly designed space to celebrate an important milestone
+                            and a newly designed space to mark an important moment
                             for the business.
                         </p>
 
                         <p>
-                            This selection captures the character of the opening through
-                            automotive details, the atmosphere of the workshop and the people
-                            who came together to mark the beginning of this new chapter.
+                            The photographs focus on automotive details, the atmosphere
+                            of the workshop and the guests who took part,
+                            documenting the first day of this new space.
                         </p>
                     </div>
 
@@ -683,6 +692,18 @@
 
                     </figure>
 
+                </div>
+
+                <!-- ==================================================
+                    HIDDEN GALLERY
+                ================================================== -->
+
+                <div
+                    class="project-gallery-grid project-gallery-more"
+                    id="project-gallery-more"
+                    hidden
+                >
+
                     <!-- IMAGE 08 — HALF -->
 
                     <figure
@@ -699,18 +720,6 @@
                         >
 
                     </figure>
-
-                </div>
-
-                <!-- ==================================================
-                    HIDDEN GALLERY
-                ================================================== -->
-
-                <div
-                    class="project-gallery-grid project-gallery-more"
-                    id="project-gallery-more"
-                    hidden
-                >
 
                     <!-- IMAGE 09 — HALF -->
 
@@ -1399,6 +1408,14 @@
                         Cookie Policy
                     </a>
 
+                    <button
+                        class="footer-legal-link footer-cookie-settings"
+                        type="button"
+                        data-cookie-settings
+                    >
+                        Cookie Settings
+                    </button>
+
                 </nav>
 
             </div>
@@ -1406,6 +1423,302 @@
         </div>
 
     </footer>
+
+        <!-- ==================================================
+            COOKIE CONSENT
+        ================================================== -->
+
+        <div
+            class="cookie-consent"
+            id="cookie-consent"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="cookie-consent-title"
+            aria-describedby="cookie-consent-description"
+            hidden
+        >
+
+            <!-- ==================================================
+                INITIAL VIEW
+            ================================================== -->
+
+            <div
+                class="cookie-consent-panel"
+                data-cookie-view="main"
+            >
+
+                <div class="cookie-consent-header">
+
+                    <p class="cookie-consent-eyebrow">
+                        Cookie settings
+                    </p>
+
+                    <h2
+                        class="cookie-consent-title"
+                        id="cookie-consent-title"
+                    >
+                        Your privacy,<br>
+                        your choice.
+                    </h2>
+
+                </div>
+
+
+                <div class="cookie-consent-body">
+
+                    <p
+                        class="cookie-consent-description"
+                        id="cookie-consent-description"
+                    >
+                        We use necessary cookies to make this website work.
+                        With your permission, we may also use analytics and
+                        marketing technologies to understand website usage
+                        and improve advertising.
+                    </p>
+
+
+                    <div class="cookie-consent-links">
+
+                        <a href="../cookie-policy/index.html">
+                            Cookie Policy
+                        </a>
+
+                        <a href="../privacy-policy/index.html">
+                            Privacy Policy
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="cookie-consent-actions">
+
+                    <button
+                        class="cookie-button cookie-button--text"
+                        type="button"
+                        data-cookie-customize
+                    >
+                        Customize
+                    </button>
+
+                    <button
+                        class="cookie-button cookie-button--secondary"
+                        type="button"
+                        data-cookie-reject
+                    >
+                        Reject non-essential
+                    </button>
+
+                    <button
+                        class="cookie-button cookie-button--primary"
+                        type="button"
+                        data-cookie-accept
+                    >
+                        Accept all
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- ==================================================
+                PREFERENCES VIEW
+            ================================================== -->
+
+            <div
+                class="cookie-consent-panel cookie-consent-preferences"
+                data-cookie-view="preferences"
+                hidden
+            >
+
+                <div class="cookie-consent-header">
+
+                    <button
+                        class="cookie-preferences-back"
+                        type="button"
+                        data-cookie-back
+                        aria-label="Back to cookie settings"
+                    >
+                        ← Back
+                    </button>
+
+                    <p class="cookie-consent-eyebrow">
+                        Cookie preferences
+                    </p>
+
+                    <h2 class="cookie-consent-title">
+                        Choose what<br>
+                        you allow.
+                    </h2>
+
+                </div>
+
+
+                <div class="cookie-preferences-list">
+
+
+                    <!-- Necessary -->
+
+                    <div class="cookie-preference">
+
+                        <div class="cookie-preference-content">
+
+                            <div class="cookie-preference-heading">
+
+                                <h3>
+                                    Necessary
+                                </h3>
+
+                                <span class="cookie-preference-required">
+                                    Always active
+                                </span>
+
+                            </div>
+
+                            <p>
+                                Required for the website to function and
+                                to remember your privacy preferences.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Analytics -->
+
+                    <div class="cookie-preference">
+
+                        <div class="cookie-preference-content">
+
+                            <div class="cookie-preference-heading">
+
+                                <div>
+
+                                    <h3>
+                                        Analytics
+                                    </h3>
+
+                                    <p>
+                                        Helps us understand how visitors use
+                                        the website and measure its performance.
+                                    </p>
+
+                                </div>
+
+
+                                <label class="cookie-toggle">
+
+                                    <input
+                                        type="checkbox"
+                                        data-cookie-analytics
+                                    >
+
+                                    <span
+                                        class="cookie-toggle-control"
+                                        aria-hidden="true"
+                                    ></span>
+
+                                    <span class="sr-only">
+                                        Allow analytics cookies
+                                    </span>
+
+                                </label>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Marketing -->
+
+                    <div class="cookie-preference">
+
+                        <div class="cookie-preference-content">
+
+                            <div class="cookie-preference-heading">
+
+                                <div>
+
+                                    <h3>
+                                        Marketing
+                                    </h3>
+
+                                    <p>
+                                        Used for advertising measurement,
+                                        remarketing and personalised advertising.
+                                    </p>
+
+                                </div>
+
+
+                                <label class="cookie-toggle">
+
+                                    <input
+                                        type="checkbox"
+                                        data-cookie-marketing
+                                    >
+
+                                    <span
+                                        class="cookie-toggle-control"
+                                        aria-hidden="true"
+                                    ></span>
+
+                                    <span class="sr-only">
+                                        Allow marketing cookies
+                                    </span>
+
+                                </label>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="cookie-consent-links">
+
+                    <a href="../cookie-policy/index.html">
+                        Cookie Policy
+                    </a>
+
+                    <a href="../privacy-policy/index.html">
+                        Privacy Policy
+                    </a>
+
+                </div>
+
+
+                <div class="cookie-consent-actions cookie-consent-actions--preferences">
+
+                    <button
+                        class="cookie-button cookie-button--secondary"
+                        type="button"
+                        data-cookie-reject
+                    >
+                        Reject non-essential
+                    </button>
+
+                    <button
+                        class="cookie-button cookie-button--primary"
+                        type="button"
+                        data-cookie-save
+                    >
+                        Save preferences
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
 
 </body>
 

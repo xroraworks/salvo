@@ -111,6 +111,71 @@
         content="Salvo Nicolosi Photography"
     >
 
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Person",
+                "@id": "https://www.salvonicolosiph.com/#person",
+                "name": "Salvo Nicolosi",
+                "url": "https://www.salvonicolosiph.com/",
+                "image": {
+                    "@type": "ImageObject",
+                    "@id": "https://www.salvonicolosiph.com/#person-image",
+                    "url": "https://www.salvonicolosiph.com/assets/images/about/salvo-nicolosi-about-portrait-color.avif"
+                },
+                "jobTitle": "Photographer",
+                "description": "Professional photographer based in Catania, Sicily, working across private events, public events and commercial photography.",
+                "email": "mailto:info@salvonicolosiph.com",
+                "sameAs": [
+                    "https://www.instagram.com/salvonicolosi.ph/",
+                    "https://www.facebook.com/salvonicolosiphotographer",
+                    "https://www.linkedin.com/in/salvonicolosi/"
+                ],
+                "worksFor": {
+                    "@id": "https://www.salvonicolosiph.com/#business"
+                }
+            },
+            {
+                "@type": [
+                    "ProfessionalService",
+                    "LocalBusiness"
+                ],
+                "@id": "https://www.salvonicolosiph.com/#business",
+                "name": "Salvo Nicolosi Photography",
+                "url": "https://www.salvonicolosiph.com/",
+                "image": {
+                    "@id": "https://www.salvonicolosiph.com/#person-image"
+                },
+                "founder": {
+                    "@id": "https://www.salvonicolosiph.com/#person"
+                },
+                "email": "mailto:info@salvonicolosiph.com",
+                "areaServed": [
+                    {
+                        "@type": "City",
+                        "name": "Catania"
+                    },
+                    {
+                        "@type": "AdministrativeArea",
+                        "name": "Sicily"
+                    },
+                    {
+                        "@type": "Country",
+                        "name": "Italy"
+                    }
+                ],
+                "sameAs": [
+                    "https://www.instagram.com/salvonicolosi.ph/",
+                    "https://www.facebook.com/salvonicolosiphotographer",
+                    "https://www.linkedin.com/in/salvonicolosi/"
+                ]
+            }
+        ]
+    }
+    </script>
+
     <!-- ==================================================
          STYLESHEET
     ================================================== -->
@@ -346,6 +411,15 @@
         </nav>
 
     </header>
+
+    <!-- ================================================== 
+            DIVIDER
+    ================================================== --> 
+
+        <div
+            class="section-divider"
+            aria-hidden="true"
+        ></div>
 
     <!-- ==================================================
          MAIN CONTENT
@@ -936,7 +1010,7 @@
                         PROJECT 09 — SQUARE
                     ================================================== -->
 
-                    <article class="portfolio-card portfolio-card--square">
+                    <article class="portfolio-card portfolio-card--tall">
 
                         <a
                             class="portfolio-card-link"
@@ -1084,17 +1158,17 @@
 
                         <a
                             class="portfolio-card-link"
-                            href="./project-12/index.html"
+                            href="./piazza-grande-rsc/index.html"
                         >
 
                             <div class="portfolio-card-heading">
 
                                 <p class="portfolio-card-meta">
-                                    Live Event · Catania · 2026
+                                    Live Show · Agira · 2026
                                 </p>
 
                                 <h3 class="portfolio-card-title">
-                                    Live Concert
+                                    Piazza Grande by RSC
                                 </h3>
 
                             </div>
@@ -1103,8 +1177,8 @@
 
                                 <img
                                     class="portfolio-card-image"
-                                    src="../assets/images/portfolio/cover/live-concert-cover.avif"
-                                    alt="Concert photography"
+                                    src="../assets/images/portfolio/cover/piazza-grande-cover.avif"
+                                    alt="Piazza Grande by RSC live show photographed in Agira, Sicily"
                                     width="1500"
                                     height="1000"
                                     loading="lazy"
@@ -1409,6 +1483,14 @@
                         Cookie Policy
                     </a>
 
+                    <button
+                        class="footer-legal-link footer-cookie-settings"
+                        type="button"
+                        data-cookie-settings
+                    >
+                        Cookie Settings
+                    </button>
+
                 </nav>
 
             </div>
@@ -1416,6 +1498,302 @@
         </div>
 
     </footer>
+
+        <!-- ==================================================
+            COOKIE CONSENT
+        ================================================== -->
+
+        <div
+            class="cookie-consent"
+            id="cookie-consent"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="cookie-consent-title"
+            aria-describedby="cookie-consent-description"
+            hidden
+        >
+
+            <!-- ==================================================
+                INITIAL VIEW
+            ================================================== -->
+
+            <div
+                class="cookie-consent-panel"
+                data-cookie-view="main"
+            >
+
+                <div class="cookie-consent-header">
+
+                    <p class="cookie-consent-eyebrow">
+                        Cookie settings
+                    </p>
+
+                    <h2
+                        class="cookie-consent-title"
+                        id="cookie-consent-title"
+                    >
+                        Your privacy,<br>
+                        your choice.
+                    </h2>
+
+                </div>
+
+
+                <div class="cookie-consent-body">
+
+                    <p
+                        class="cookie-consent-description"
+                        id="cookie-consent-description"
+                    >
+                        We use necessary cookies to make this website work.
+                        With your permission, we may also use analytics and
+                        marketing technologies to understand website usage
+                        and improve advertising.
+                    </p>
+
+
+                    <div class="cookie-consent-links">
+
+                        <a href="../cookie-policy/index.html">
+                            Cookie Policy
+                        </a>
+
+                        <a href="../privacy-policy/index.html">
+                            Privacy Policy
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="cookie-consent-actions">
+
+                    <button
+                        class="cookie-button cookie-button--text"
+                        type="button"
+                        data-cookie-customize
+                    >
+                        Customize
+                    </button>
+
+                    <button
+                        class="cookie-button cookie-button--secondary"
+                        type="button"
+                        data-cookie-reject
+                    >
+                        Reject non-essential
+                    </button>
+
+                    <button
+                        class="cookie-button cookie-button--primary"
+                        type="button"
+                        data-cookie-accept
+                    >
+                        Accept all
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- ==================================================
+                PREFERENCES VIEW
+            ================================================== -->
+
+            <div
+                class="cookie-consent-panel cookie-consent-preferences"
+                data-cookie-view="preferences"
+                hidden
+            >
+
+                <div class="cookie-consent-header">
+
+                    <button
+                        class="cookie-preferences-back"
+                        type="button"
+                        data-cookie-back
+                        aria-label="Back to cookie settings"
+                    >
+                        ← Back
+                    </button>
+
+                    <p class="cookie-consent-eyebrow">
+                        Cookie preferences
+                    </p>
+
+                    <h2 class="cookie-consent-title">
+                        Choose what<br>
+                        you allow.
+                    </h2>
+
+                </div>
+
+
+                <div class="cookie-preferences-list">
+
+
+                    <!-- Necessary -->
+
+                    <div class="cookie-preference">
+
+                        <div class="cookie-preference-content">
+
+                            <div class="cookie-preference-heading">
+
+                                <h3>
+                                    Necessary
+                                </h3>
+
+                                <span class="cookie-preference-required">
+                                    Always active
+                                </span>
+
+                            </div>
+
+                            <p>
+                                Required for the website to function and
+                                to remember your privacy preferences.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Analytics -->
+
+                    <div class="cookie-preference">
+
+                        <div class="cookie-preference-content">
+
+                            <div class="cookie-preference-heading">
+
+                                <div>
+
+                                    <h3>
+                                        Analytics
+                                    </h3>
+
+                                    <p>
+                                        Helps us understand how visitors use
+                                        the website and measure its performance.
+                                    </p>
+
+                                </div>
+
+
+                                <label class="cookie-toggle">
+
+                                    <input
+                                        type="checkbox"
+                                        data-cookie-analytics
+                                    >
+
+                                    <span
+                                        class="cookie-toggle-control"
+                                        aria-hidden="true"
+                                    ></span>
+
+                                    <span class="sr-only">
+                                        Allow analytics cookies
+                                    </span>
+
+                                </label>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Marketing -->
+
+                    <div class="cookie-preference">
+
+                        <div class="cookie-preference-content">
+
+                            <div class="cookie-preference-heading">
+
+                                <div>
+
+                                    <h3>
+                                        Marketing
+                                    </h3>
+
+                                    <p>
+                                        Used for advertising measurement,
+                                        remarketing and personalised advertising.
+                                    </p>
+
+                                </div>
+
+
+                                <label class="cookie-toggle">
+
+                                    <input
+                                        type="checkbox"
+                                        data-cookie-marketing
+                                    >
+
+                                    <span
+                                        class="cookie-toggle-control"
+                                        aria-hidden="true"
+                                    ></span>
+
+                                    <span class="sr-only">
+                                        Allow marketing cookies
+                                    </span>
+
+                                </label>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="cookie-consent-links">
+
+                    <a href="../cookie-policy/index.html">
+                        Cookie Policy
+                    </a>
+
+                    <a href="../privacy-policy/index.html">
+                        Privacy Policy
+                    </a>
+
+                </div>
+
+
+                <div class="cookie-consent-actions cookie-consent-actions--preferences">
+
+                    <button
+                        class="cookie-button cookie-button--secondary"
+                        type="button"
+                        data-cookie-reject
+                    >
+                        Reject non-essential
+                    </button>
+
+                    <button
+                        class="cookie-button cookie-button--primary"
+                        type="button"
+                        data-cookie-save
+                    >
+                        Save preferences
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
 
 </body>
 
