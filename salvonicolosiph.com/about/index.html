@@ -103,22 +103,64 @@
         <script type="application/ld+json">
         {
             "@context": "https://schema.org",
-            "@type": "Person",
-            "name": "Salvo Nicolosi",
-            "url": "https://www.salvonicolosiph.com/about/",
-            "image": "https://www.salvonicolosiph.com/assets/images/about/salvo-nicolosi-about-portrait-color.avif",
-            "jobTitle": "Photographer",
-            "description": "Photographer in Catania and Sicily for weddings, private events, commercial projects and personal branding.",
-            "email": "info@salvonicolosiph.com",
-            "areaServed": [
-                "Catania",
-                "Sicily",
-                "Italy"
-            ],
-            "sameAs": [
-                "https://www.instagram.com/salvonicolosi.ph/",
-                "https://www.facebook.com/salvonicolosiphotographer",
-                "https://www.linkedin.com/in/salvonicolosi/"
+            "@graph": [
+                {
+                    "@type": "Person",
+                    "@id": "https://www.salvonicolosiph.com/#person",
+                    "name": "Salvo Nicolosi",
+                    "url": "https://www.salvonicolosiph.com/",
+                    "image": {
+                        "@type": "ImageObject",
+                        "@id": "https://www.salvonicolosiph.com/#person-image",
+                        "url": "https://www.salvonicolosiph.com/assets/images/about/salvo-nicolosi-about-portrait-color.avif"
+                    },
+                    "jobTitle": "Photographer",
+                    "description": "Professional photographer based in Catania, Sicily, working across private events, public events and commercial photography.",
+                    "email": "mailto:info@salvonicolosiph.com",
+                    "sameAs": [
+                        "https://www.instagram.com/salvonicolosi.ph/",
+                        "https://www.facebook.com/salvonicolosiphotographer",
+                        "https://www.linkedin.com/in/salvonicolosi/"
+                    ],
+                    "worksFor": {
+                        "@id": "https://www.salvonicolosiph.com/#business"
+                    }
+                },
+                {
+                    "@type": [
+                        "ProfessionalService",
+                        "LocalBusiness"
+                    ],
+                    "@id": "https://www.salvonicolosiph.com/#business",
+                    "name": "Salvo Nicolosi Photography",
+                    "url": "https://www.salvonicolosiph.com/",
+                    "image": {
+                        "@id": "https://www.salvonicolosiph.com/#person-image"
+                    },
+                    "founder": {
+                        "@id": "https://www.salvonicolosiph.com/#person"
+                    },
+                    "email": "mailto:info@salvonicolosiph.com",
+                    "areaServed": [
+                        {
+                            "@type": "City",
+                            "name": "Catania"
+                        },
+                        {
+                            "@type": "AdministrativeArea",
+                            "name": "Sicily"
+                        },
+                        {
+                            "@type": "Country",
+                            "name": "Italy"
+                        }
+                    ],
+                    "sameAs": [
+                        "https://www.instagram.com/salvonicolosi.ph/",
+                        "https://www.facebook.com/salvonicolosiphotographer",
+                        "https://www.linkedin.com/in/salvonicolosi/"
+                    ]
+                }
             ]
         }
         </script>
