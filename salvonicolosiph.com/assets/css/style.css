@@ -690,28 +690,44 @@ body.menu-open .social-icon {
 
 .about-grid {
     display: grid;
-    grid-template-columns: minmax(260px, 0.82fr) minmax(0, 1.18fr);
-    gap: clamp(40px, 7vw, 112px);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(40px, 6vw, 88px);
+}
+
+.about-grid > * {
+    min-width: 0;
+}
+
+.about-section--reverse .about-section-heading,
+.about-section--reverse .about-copy {
+    grid-row: 1;
 }
 
 .about-section--reverse .about-section-heading {
-    grid-column: 2;
+    grid-column: 1;
 }
 
 .about-section--reverse .about-copy {
-    grid-column: 1;
-    grid-row: 1;
+    grid-column: 2;
 }
 
 .about-section-heading {
     align-self: start;
 }
 
-.about-section h2,
+.about-section h2 {
+    width: 100%;
+    max-width: 700px;
+    font-size: clamp(2.1rem, 3.6vw, 4.4rem);
+    line-height: 1.04;
+    overflow-wrap: normal;
+    word-break: normal;
+}
+
 .about-statement h2,
 .about-cta h2 {
     max-width: 820px;
-    font-size: clamp(2.1rem, 4.6vw, 4.9rem);
+    font-size: clamp(2.1rem, 4.2vw, 4.6rem);
     line-height: 1;
 }
 
@@ -723,24 +739,24 @@ body.menu-open .social-icon {
 }
 
 .about-copy {
-    display: grid;
-    grid-template-columns: repeat(12, minmax(0, 1fr));
-    gap: clamp(28px, 4vw, 54px) 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: clamp(32px, 4vw, 48px);
+    width: 100%;
+    min-width: 0;
     counter-reset: about-fragment;
 }
 
 .about-copy p {
     position: relative;
-    grid-column: 1 / 11;
+    width: 100%;
+    max-width: 640px;
     margin: 0;
     padding-top: 18px;
     border-top: 1px solid var(--color-border);
     counter-increment: about-fragment;
     text-wrap: pretty;
-}
-
-.about-copy p:nth-child(even) {
-    grid-column: 3 / 13;
 }
 
 .about-copy p::before {
@@ -755,14 +771,6 @@ body.menu-open .social-icon {
     letter-spacing: 0.08em;
     color: var(--color-orange);
     background: var(--color-white);
-}
-
-.about-section--reverse .about-copy p {
-    grid-column: 2 / 13;
-}
-
-.about-section--reverse .about-copy p:nth-child(even) {
-    grid-column: 1 / 10;
 }
 
 .about-statement {
@@ -869,7 +877,7 @@ body.reveal-ready .eyebrow-bracket::after {
     }
 
     .about-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
         gap: 18px;
     }
 
@@ -883,17 +891,17 @@ body.reveal-ready .eyebrow-bracket::after {
         gap: 34px;
     }
 
-    .about-copy p,
-    .about-copy p:nth-child(even),
-    .about-section--reverse .about-copy p,
-    .about-section--reverse .about-copy p:nth-child(even) {
-        grid-column: 1 / 13;
+    .about-section-heading,
+    .about-copy,
+    .about-copy p {
+        width: 100%;
+        min-width: 0;
     }
 
     .about-hero-layout,
     .about-statement-layout,
     .about-cta-layout {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
     }
 
     .about-hero-content {
