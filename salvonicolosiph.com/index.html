@@ -106,18 +106,29 @@
             content="Salvo Nicolosi" 
         >
     
-    <!-- ==================================================
-     STYLESHEET
-    ================================================== -->
+        <!-- ==================================================
+            LCP IMAGE
+        ================================================== -->
+
+        <link
+            rel="preload"
+            as="image"
+            href="./assets/images/home/hero/foto-carnevale.avif"
+            fetchpriority="high"
+        >
+
+        <!-- ==================================================
+        STYLESHEET
+        ================================================== -->
 
         <link
             rel="stylesheet"
             href="./assets/css/style.css"
         >
 
-    <!-- ==================================================
-     JAVASCRIPT
-    ================================================== -->
+        <!-- ==================================================
+        JAVASCRIPT
+        ================================================== -->
 
         <script
             src="./assets/js/main.js"
@@ -164,7 +175,7 @@
                         class="site-logo-image"
                         src="./assets/images/logo/salvo-nicolosi-logo-nero.png"
                         width="240"
-                        height="80"
+                        height="240"
                         alt=""
                     >
 
@@ -172,7 +183,7 @@
                         class="site-logo-image site-logo-image-light"
                         src="./assets/images/logo/salvo-nicolosi-logo-bianco.png"
                         width="240"
-                        height="80"
+                        height="240"
                         alt=""
                     >
 
@@ -405,42 +416,75 @@
                                 loading="eager"
                                 fetchpriority="high"
                             >
+                            <div class="hero-slide-caption">
+                                <span class="hero-slide-caption-category">Public Event</span>
+                                <h2>Misterbianco<br>Carnival 2026</h2>
+                            </div>                  
+
                         </article>
 
                         <article class="hero-slide hero-slide--center">
                             <img
                                 src="./assets/images/home/hero/piazza-grande-agira.avif"
                                 alt="Private event photography"
-                                loading="eager"
-                                fetchpriority="high"
+                                loading="lazy"
+                                fetchpriority="low"
+                                width="1620"
+                                height="913"
                             >
+
+                            <div class="hero-slide-caption">
+                                <span class="hero-slide-caption-category">Live Music Event</span>
+                                <h2>Piazza Grande<br>by RSC</h2>
+                            </div>                            
                         </article>
 
                         <article class="hero-slide hero-slide--center">
                             <img
                                 src="./assets/images/home/hero/wedding-belpasso.avif"
                                 alt="Private event photography"
-                                loading="eager"
-                                fetchpriority="high"
+                                loading="lazy"
+                                fetchpriority="low"
+                                width="1620"
+                                height="913"                                
                             >
+
+                            <div class="hero-slide-caption">
+                                <span class="hero-slide-caption-category">Wedding</span>
+                                <h2>Alessio &amp;<br>Sarah</h2>
+                            </div>                            
                         </article>
 
                         <article class="hero-slide hero-slide--top">
                             <img
                                 src="./assets/images/home/hero/alcott-taormina.png"
                                 alt="Corporate photography"
-                                loading="eager"
-                                fetchpriority="high"
+                                loading="lazy"
+                                fetchpriority="low"
+                                width="1620"
+                                height="913"                                
                             >
+
+                            <div class="hero-slide-caption">
+                                <span class="hero-slide-caption-category">Corporate Event</span>
+                                <h2>Alcott<br>Taormina</h2>
+                            </div>
                         </article>
 
                         <article class="hero-slide hero-slide--center">
                             <img
                                 src="./assets/images/home/hero/18th-birthday.avif"
                                 alt="Public event photography"
-                                loading="eager"
-                                fetchpriority="high"
+                                loading="lazy"
+                                fetchpriority="low"
+                                width="1620"
+                                height="913"                                
                             >
+
+                            <div class="hero-slide-caption">
+                                <span class="hero-slide-caption-category">Private Event</span>
+                                <h2>Antonio's 18th<br>Birthday</h2>
+                            </div>                            
                         </article>
 
                     </div>
@@ -467,7 +511,7 @@
                         <span class="hero-counter">
                             <span class="current-slide">01</span>
                                 /
-                            <span class="total-slides">04</span>
+                            <span class="total-slides">05</span>
                         </span>
 
                         <button
@@ -1156,6 +1200,8 @@
                         <img
                             class="footer-logo-image"
                             src="./assets/images/logo/salvo-nicolosi-logo-bianco.png"
+                            width="240"
+                            height="240"
                             alt="Salvo Nicolosi Photography"
                         >
                     </a>
