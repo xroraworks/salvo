@@ -4454,12 +4454,17 @@ body.page-services .services-offer-copy::before {
     color: var(--color-orange);
 }
 
-body.page-services .services-offer:nth-child(1) .services-offer-copy::before { content: "01 / 06"; }
-body.page-services .services-offer:nth-child(2) .services-offer-copy::before { content: "02 / 06"; }
-body.page-services .services-offer:nth-child(3) .services-offer-copy::before { content: "03 / 06"; }
-body.page-services .services-offer:nth-child(4) .services-offer-copy::before { content: "04 / 06"; }
-body.page-services .services-offer:nth-child(5) .services-offer-copy::before { content: "05 / 06"; }
-body.page-services .services-offer:nth-child(6) .services-offer-copy::before { content: "06 / 06"; }
+body.page-services .services-offer:nth-child(1) .services-offer-copy::before { content: "01 / 11"; }
+body.page-services .services-offer:nth-child(2) .services-offer-copy::before { content: "02 / 11"; }
+body.page-services .services-offer:nth-child(3) .services-offer-copy::before { content: "03 / 11"; }
+body.page-services .services-offer:nth-child(4) .services-offer-copy::before { content: "04 / 11"; }
+body.page-services .services-offer:nth-child(5) .services-offer-copy::before { content: "05 / 11"; }
+body.page-services .services-offer:nth-child(6) .services-offer-copy::before { content: "06 / 11"; }
+body.page-services .services-offer:nth-child(7) .services-offer-copy::before { content: "07 / 11"; }
+body.page-services .services-offer:nth-child(8) .services-offer-copy::before { content: "08 / 11"; }
+body.page-services .services-offer:nth-child(9) .services-offer-copy::before { content: "09 / 11"; }
+body.page-services .services-offer:nth-child(10) .services-offer-copy::before { content: "10 / 11"; }
+body.page-services .services-offer:nth-child(11) .services-offer-copy::before { content: "11 / 11"; }
 
 body.page-services .services-offer-copy h3 {
     max-width: 680px;

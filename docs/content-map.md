@@ -201,8 +201,14 @@ HOME → PORTFOLIO
 Servizi attuali:
 
 ```text
-PRIVATE EVENTS
+WEDDINGS
+BIRTHDAYS
+GRADUATIONS
+CHRISTENINGS
 CORPORATE EVENTS
+FESTIVALS
+LIVE SHOWS
+ADVERTISING
 RESTAURANTS & BUSINESSES
 SOCIAL CONTENT
 STUDIO PHOTOGRAPHY
@@ -211,8 +217,14 @@ STUDIO PHOTOGRAPHY
 Italiano:
 
 ```text
-EVENTI PRIVATI
+MATRIMONI
+COMPLEANNI
+LAUREE
+BATTESIMI
 EVENTI AZIENDALI
+FESTIVAL
+LIVE SHOW
+ADV
 RISTORANTI E ATTIVITÀ
 CONTENUTI SOCIAL
 SHOOTING IN STUDIO
@@ -517,14 +529,19 @@ COME RICHIEDERE INFORMAZIONI
 
 ### 29.1 Architettura delle pagine inglesi
 
-`/services/` resta la pagina indice e collega sei pagine principali:
+`/services/` resta la pagina indice e presenta undici servizi:
 
-- Private Events;
+- Weddings;
+- Birthdays;
+- Graduations;
+- Christenings;
 - Corporate Events;
+- Festivals;
+- Live Shows;
+- Advertising;
 - Restaurants & Businesses;
 - Social Content;
 - Studio Photography;
-- Video.
 
 La Home inglese collega inoltre gli approfondimenti dedicati a matrimoni,
 diciottesimi, compleanni, feste familiari, festival, eventi culturali ed
