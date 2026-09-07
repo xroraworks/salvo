@@ -20,51 +20,72 @@
         <meta property="og:locale" content="en_GB">
         <meta property="og:site_name" content="Salvo Nicolosi">
         <script type="application/ld+json">
-    {
+            {
             "@context": "https://schema.org",
             "@graph": [
+                {
+                "@type": "Person",
+                "@id": "https://salvonicolosiph.com/#person",
+                "name": "Salvo Nicolosi",
+                "url": "https://salvonicolosiph.com/services/christening/index.html/",
+                "image": {
+                    "@type": "ImageObject",
+                    "@id": "https://salvonicolosiph.com/#person-image",
+                    "url": "https://salvonicolosiph.com/assets/images/about/salvo-nicolosi-about-portrait-color.avif"
+                },
+                "jobTitle": "Photographer",
+                "description": "Professional photographer based in Catania, Sicily, working across private events, public events and commercial photography.",
+                "email": "info@salvonicolosiph.com",
+                "sameAs": [
+                    "https://www.instagram.com/salvonicolosi.ph/",
+                    "https://www.facebook.com/salvonicolosiphotographer",
+                    "https://www.linkedin.com/in/salvonicolosi/"
+                ],
+                "worksFor": {
+                    "@id": "https://salvonicolosiph.com/#organization"
+                }
+                },
+                {
+                "@type": "Organization",
+                "@id": "https://salvonicolosiph.com/#organization",
+                "name": "Salvo Nicolosi Photography",
+                "url": "https://salvonicolosiph.com/",
+                "founder": {
+                    "@id": "https://salvonicolosiph.com/#person"
+                },
+                "email": "info@salvonicolosiph.com",
+                "areaServed": [
                     {
-                            "@type": "Service",
-                            "name": "Christening",
-                            "url": "https://www.salvonicolosiph.com/services/christening/",
-                            "description": "Christening photography in Catania and Sicily, documenting ceremonies, family portraits and natural moments.",
-                            "provider": {
-                                    "@type": "Person",
-                                    "name": "Salvo Nicolosi",
-                                    "url": "https://www.salvonicolosiph.com/"
-                            },
-                            "areaServed": [
-                                    "Catania",
-                                    "Sicily",
-                                    "Italy"
-                            ],
-                            "serviceType": "Christening Photography in Sicily"
+                    "@type": "City",
+                    "name": "Catania"
                     },
                     {
-                            "@type": "BreadcrumbList",
-                            "itemListElement": [
-                                    {
-                                            "@type": "ListItem",
-                                            "position": 1,
-                                            "name": "Home",
-                                            "item": "https://www.salvonicolosiph.com/"
-                                    },
-                                    {
-                                            "@type": "ListItem",
-                                            "position": 2,
-                                            "name": "Services",
-                                            "item": "https://www.salvonicolosiph.com/services/"
-                                    },
-                                    {
-                                            "@type": "ListItem",
-                                            "position": 3,
-                                            "name": "Christening",
-                                            "item": "https://www.salvonicolosiph.com/services/christening/"
-                                    }
-                            ]
+                    "@type": "AdministrativeArea",
+                    "name": "Sicily"
+                    },
+                    {
+                    "@type": "Country",
+                    "name": "Italy"
                     }
+                ],
+                "sameAs": [
+                    "https://www.instagram.com/salvonicolosi.ph/",
+                    "https://www.facebook.com/salvonicolosiphotographer",
+                    "https://www.linkedin.com/in/salvonicolosi/"
+                ]
+                },
+                {
+                "@type": "WebSite",
+                "@id": "https://salvonicolosiph.com/#website",
+                "url": "https://salvonicolosiph.com/",
+                "name": "Salvo Nicolosi Photography",
+                "publisher": {
+                    "@id": "https://salvonicolosiph.com/#organization"
+                },
+                "inLanguage": "en"
+                }
             ]
-    }
+            }
         </script>
         <link rel="stylesheet" href="../../assets/css/style.css">
         <script src="../../assets/js/main.js" defer></script>

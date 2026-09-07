@@ -91,68 +91,72 @@
         >
 
         <script type="application/ld+json">
-        {
+            {
             "@context": "https://schema.org",
             "@graph": [
                 {
-                    "@type": "Person",
-                    "@id": "https://www.salvonicolosiph.com/#person",
-                    "name": "Salvo Nicolosi",
-                    "url": "https://www.salvonicolosiph.com/",
-                    "image": {
-                        "@type": "ImageObject",
-                        "@id": "https://www.salvonicolosiph.com/#person-image",
-                        "url": "https://www.salvonicolosiph.com/assets/images/about/salvo-nicolosi-about-portrait-color.avif"
-                    },
-                    "jobTitle": "Photographer",
-                    "description": "Professional photographer based in Catania, Sicily, working across private events, public events and commercial photography.",
-                    "email": "mailto:info@salvonicolosiph.com",
-                    "sameAs": [
-                        "https://www.instagram.com/salvonicolosi.ph/",
-                        "https://www.facebook.com/salvonicolosiphotographer",
-                        "https://www.linkedin.com/in/salvonicolosi/"
-                    ],
-                    "worksFor": {
-                        "@id": "https://www.salvonicolosiph.com/#business"
-                    }
+                "@type": "Person",
+                "@id": "https://salvonicolosiph.com/#person",
+                "name": "Salvo Nicolosi",
+                "url": "https://salvonicolosiph.com/services/",
+                "image": {
+                    "@type": "ImageObject",
+                    "@id": "https://salvonicolosiph.com/#person-image",
+                    "url": "https://salvonicolosiph.com/assets/images/about/salvo-nicolosi-about-portrait-color.avif"
+                },
+                "jobTitle": "Photographer",
+                "description": "Professional photographer based in Catania, Sicily, working across private events, public events and commercial photography.",
+                "email": "info@salvonicolosiph.com",
+                "sameAs": [
+                    "https://www.instagram.com/salvonicolosi.ph/",
+                    "https://www.facebook.com/salvonicolosiphotographer",
+                    "https://www.linkedin.com/in/salvonicolosi/"
+                ],
+                "worksFor": {
+                    "@id": "https://salvonicolosiph.com/#organization"
+                }
                 },
                 {
-                    "@type": [
-                        "ProfessionalService",
-                        "LocalBusiness"
-                    ],
-                    "@id": "https://www.salvonicolosiph.com/#business",
-                    "name": "Salvo Nicolosi Photography",
-                    "url": "https://www.salvonicolosiph.com/",
-                    "image": {
-                        "@id": "https://www.salvonicolosiph.com/#person-image"
+                "@type": "Organization",
+                "@id": "https://salvonicolosiph.com/#organization",
+                "name": "Salvo Nicolosi Photography",
+                "url": "https://salvonicolosiph.com/",
+                "founder": {
+                    "@id": "https://salvonicolosiph.com/#person"
+                },
+                "email": "info@salvonicolosiph.com",
+                "areaServed": [
+                    {
+                    "@type": "City",
+                    "name": "Catania"
                     },
-                    "founder": {
-                        "@id": "https://www.salvonicolosiph.com/#person"
+                    {
+                    "@type": "AdministrativeArea",
+                    "name": "Sicily"
                     },
-                    "email": "mailto:info@salvonicolosiph.com",
-                    "areaServed": [
-                        {
-                            "@type": "City",
-                            "name": "Catania"
-                        },
-                        {
-                            "@type": "AdministrativeArea",
-                            "name": "Sicily"
-                        },
-                        {
-                            "@type": "Country",
-                            "name": "Italy"
-                        }
-                    ],
-                    "sameAs": [
-                        "https://www.instagram.com/salvonicolosi.ph/",
-                        "https://www.facebook.com/salvonicolosiphotographer",
-                        "https://www.linkedin.com/in/salvonicolosi/"
-                    ]
+                    {
+                    "@type": "Country",
+                    "name": "Italy"
+                    }
+                ],
+                "sameAs": [
+                    "https://www.instagram.com/salvonicolosi.ph/",
+                    "https://www.facebook.com/salvonicolosiphotographer",
+                    "https://www.linkedin.com/in/salvonicolosi/"
+                ]
+                },
+                {
+                "@type": "WebSite",
+                "@id": "https://salvonicolosiph.com/#website",
+                "url": "https://salvonicolosiph.com/",
+                "name": "Salvo Nicolosi Photography",
+                "publisher": {
+                    "@id": "https://salvonicolosiph.com/#organization"
+                },
+                "inLanguage": "en"
                 }
             ]
-        }
+            }
         </script>
 
         <link
@@ -418,7 +422,7 @@
                         >
                             <figure class="services-offer-media">
                                 <img
-                                    src="../assets/images/home/services/private-wedding.avif"
+                                    src="../assets/images/services/private-wedding.avif"
                                     alt="Wedding celebration photographed in Sicily"
                                     loading="lazy"
                                     decoding="async"
@@ -446,7 +450,7 @@
                         >
                             <figure class="services-offer-media">
                                 <img
-                                    src="../assets/images/home/services/private-birthday.avif"
+                                    src="../assets/images/services/private-birthday.avif"
                                     alt="Birthday celebration photographed in Sicily"
                                     loading="lazy"
                                     decoding="async"
@@ -530,7 +534,7 @@
                         >
                             <figure class="services-offer-media">
                                 <img
-                                    src="../assets/images/home/services/public-corporate.avif"
+                                    src="../assets/images/services/public-corporate.avif"
                                     alt="Corporate event photography for a business in Sicily"
                                     loading="lazy"
                                     decoding="async"
@@ -558,7 +562,7 @@
                         >
                             <figure class="services-offer-media">
                                 <img
-                                    src="../assets/images/home/services/public-festival.avif"
+                                    src="../assets/images/services/public-festival.avif"
                                     alt="Festival photographed in Sicily"
                                     loading="lazy"
                                     decoding="async"
@@ -585,7 +589,7 @@
                             aria-label="Explore live show photography"
                         >
                             <figure class="services-offer-media">
-                                <img src="../assets/images/home/services/live-show.avif" alt="Live show photographed in Sicily" loading="lazy" decoding="async">
+                                <img src="../assets/images/services/live-show.avif" alt="Live show photographed in Sicily" loading="lazy" decoding="async">
                             </figure>
                             <div class="services-offer-copy">
                                 <h3>Live Shows</h3>
@@ -602,7 +606,7 @@
                             aria-label="Explore advertising photography"
                         >
                             <figure class="services-offer-media">
-                                <img src="../assets/images/home/services/public-cultural.jpg" alt="Advertising photography created for a brand" loading="lazy" decoding="async">
+                                <img src="../assets/images/services/public-cultural.jpg" alt="Advertising photography created for a brand" loading="lazy" decoding="async">
                             </figure>
                             <div class="services-offer-copy">
                                 <h3>Advertising</h3>
@@ -619,7 +623,7 @@
                             aria-label="Explore photography for restaurants and businesses"
                         >
                             <figure class="services-offer-media">
-                                <img src="../assets/images/home/services/public-commercial.avif" alt="Commercial photography for a restaurant and local business" loading="lazy" decoding="async">
+                                <img src="../assets/images/services/public-commercial.avif" alt="Commercial photography for a restaurant and local business" loading="lazy" decoding="async">
                             </figure>
                             <div class="services-offer-copy">
                                 <h3>Restaurants &amp; Businesses</h3>
@@ -632,15 +636,15 @@
                         <a
                             id="social-content"
                             class="services-offer services-offer-social"
-                            href="./social-content/"
-                            aria-label="Explore social content photography"
+                            href="./social-contents/"
+                            aria-label="Explore social contents photography"
                         >
                             <figure class="services-offer-media">
-                                <img src="../assets/images/home/services/public-cultural.jpg" alt="Photography created for social media communication" loading="lazy" decoding="async">
+                                <img src="../assets/images/services/public-cultural.jpg" alt="Photography created for social media communication" loading="lazy" decoding="async">
                             </figure>
                             <div class="services-offer-copy">
                                 <h3>Social Content</h3>
-                                <p class="services-offer-list">Instagram photography, campaign shoots and quick content.</p>
+                                <p class="services-offer-list">Instagram photography, campaign shoots and quick contents.</p>
                                 <p>Flexible production for a consistent digital presence, from individual sessions to complete campaigns.</p>
                                 <span class="services-offer-action">Explore service</span>
                             </div>
@@ -653,7 +657,7 @@
                             aria-label="Explore studio photography"
                         >
                             <figure class="services-offer-media">
-                                <img src="../assets/images/about/salvo-nicolosi-about-session-01.avif" alt="Professional studio photography session" loading="lazy" decoding="async">
+                                <img src="../assets/images/services/studio-photography.avif" alt="Professional studio photography session" loading="lazy" decoding="async">
                             </figure>
                             <div class="services-offer-copy">
                                 <h3>Studio Photography</h3>
