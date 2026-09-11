@@ -4360,18 +4360,6 @@ body.page-services .services-page-hero {
     overflow: hidden;
 }
 
-body.page-services .services-page-hero::after {
-    content: "SERVICES / 01";
-    position: absolute;
-    right: var(--page-padding);
-    bottom: 20px;
-    font-family: var(--font-mono);
-    font-size: 0.68rem;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    color: var(--color-muted);
-}
-
 body.page-services .services-page-hero-layout {
     display: grid;
     grid-template-columns: minmax(0, 1.08fr) minmax(340px, 0.72fr);
@@ -4560,17 +4548,14 @@ body.page-services .services-offer-copy::before {
     color: var(--color-orange);
 }
 
-body.page-services .services-offer:nth-child(1) .services-offer-copy::before { content: "01 / 11"; }
-body.page-services .services-offer:nth-child(2) .services-offer-copy::before { content: "02 / 11"; }
-body.page-services .services-offer:nth-child(3) .services-offer-copy::before { content: "03 / 11"; }
-body.page-services .services-offer:nth-child(4) .services-offer-copy::before { content: "04 / 11"; }
-body.page-services .services-offer:nth-child(5) .services-offer-copy::before { content: "05 / 11"; }
-body.page-services .services-offer:nth-child(6) .services-offer-copy::before { content: "06 / 11"; }
-body.page-services .services-offer:nth-child(7) .services-offer-copy::before { content: "07 / 11"; }
-body.page-services .services-offer:nth-child(8) .services-offer-copy::before { content: "08 / 11"; }
-body.page-services .services-offer:nth-child(9) .services-offer-copy::before { content: "09 / 11"; }
-body.page-services .services-offer:nth-child(10) .services-offer-copy::before { content: "10 / 11"; }
-body.page-services .services-offer:nth-child(11) .services-offer-copy::before { content: "11 / 11"; }
+body.page-services .services-offer:nth-child(1) .services-offer-copy::before { content: "01 / 08"; }
+body.page-services .services-offer:nth-child(2) .services-offer-copy::before { content: "02 / 08"; }
+body.page-services .services-offer:nth-child(3) .services-offer-copy::before { content: "03 / 08"; }
+body.page-services .services-offer:nth-child(4) .services-offer-copy::before { content: "04 / 08"; }
+body.page-services .services-offer:nth-child(5) .services-offer-copy::before { content: "05 / 08"; }
+body.page-services .services-offer:nth-child(6) .services-offer-copy::before { content: "06 / 08"; }
+body.page-services .services-offer:nth-child(7) .services-offer-copy::before { content: "07 / 08"; }
+body.page-services .services-offer:nth-child(8) .services-offer-copy::before { content: "08 / 08"; }
 
 body.page-services .services-offer-copy h3 {
     max-width: 680px;
