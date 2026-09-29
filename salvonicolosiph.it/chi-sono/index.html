@@ -14,7 +14,7 @@
 
         <meta
             name="description"
-            content="Salvo Nicolosi è un fotografo professionista a Catania, attivo in Sicilia per matrimoni, eventi, progetti commerciali e personal branding."
+            content="Salvo Nicolosi è un fotografo professionista a Catania per matrimoni, eventi, fotografia commerciale e personal branding."
         >
 
         <meta
@@ -24,25 +24,25 @@
 
         <link
             rel="canonical"
-            href="https://www.salvonicolosiph.it/chi-sono/"
+            href="https://salvonicolosiph.it/chi-sono/"
         >
 
         <link
             rel="alternate"
             hreflang="en"
-            href="https://www.salvonicolosiph.com/about/"
+            href="https://salvonicolosiph.com/about/"
         >
 
         <link
             rel="alternate"
             hreflang="it"
-            href="https://www.salvonicolosiph.it/chi-sono/"
+            href="https://salvonicolosiph.it/chi-sono/"
         >
 
         <link
             rel="alternate"
             hreflang="x-default"
-            href="https://www.salvonicolosiph.com/about/"
+            href="https://salvonicolosiph.com/about/"
         >
 
         <meta
@@ -52,7 +52,7 @@
 
         <meta
             property="og:title"
-            content="Chi sono | Fotografo a Catania | Salvo Nicolosi"
+            content="About | Photographer in Catania | Salvo Nicolosi"
         >
 
         <meta
@@ -62,12 +62,12 @@
 
         <meta
             property="og:url"
-            content="https://www.salvonicolosiph.it/chi-sono/"
+            content="https://salvonicolosiph.it/chi-sono/"
         >
 
         <meta
             property="og:image"
-            content="https://www.salvonicolosiph.it/assets/images/about/salvo-nicolosi-about-og.avif"
+            content="https://salvonicolosiph.it/assets/images/about/salvo-nicolosi-about-og.avif"
         >
 
         <meta
@@ -102,24 +102,70 @@
 
         <script type="application/ld+json">
         {
-            "@context": "https://schema.org",
+        "@context": "https://schema.org",
+        "@graph": [
+            {
             "@type": "Person",
+            "@id": "https://salvonicolosiph.com/#person",
             "name": "Salvo Nicolosi",
-            "url": "https://www.salvonicolosiph.it/chi-sono/",
-            "image": "https://www.salvonicolosiph.it/assets/images/about/salvo-nicolosi-about-portrait-color.avif",
+            "url": "https://salvonicolosiph.com/about/",
+            "image": {
+                "@type": "ImageObject",
+                "@id": "https://salvonicolosiph.com/#person-image",
+                "url": "https://salvonicolosiph.com/assets/images/about/salvo-nicolosi-about-portrait-color.avif"
+            },
             "jobTitle": "Fotografo",
-            "description": "Fotografo a Catania e in Sicilia per matrimoni, eventi privati, progetti commerciali e personal branding.",
+            "description": "Fotografo professionista a Catania, in Sicilia, specializzato in eventi privati, eventi pubblici e fotografia commerciale.",
+            "email": "info@salvonicolosiph.com",
+            "sameAs": [
+                "https://www.instagram.com/salvonicolosi.ph/",
+                "https://www.facebook.com/salvonicolosiphotographer",
+                "https://www.linkedin.com/in/salvonicolosi/"
+            ],
+            "worksFor": {
+                "@id": "https://salvonicolosiph.com/#organization"
+            }
+            },
+            {
+            "@type": "Organization",
+            "@id": "https://salvonicolosiph.com/#organization",
+            "name": "Salvo Nicolosi Photography",
+            "url": "https://salvonicolosiph.com/",
+            "founder": {
+                "@id": "https://salvonicolosiph.com/#person"
+            },
             "email": "info@salvonicolosiph.com",
             "areaServed": [
-                "Catania",
-                "Sicilia",
-                "Italia"
+                {
+                "@type": "City",
+                "name": "Catania"
+                },
+                {
+                "@type": "AdministrativeArea",
+                "name": "Sicily"
+                },
+                {
+                "@type": "Country",
+                "name": "Italy"
+                }
             ],
             "sameAs": [
                 "https://www.instagram.com/salvonicolosi.ph/",
                 "https://www.facebook.com/salvonicolosiphotographer",
                 "https://www.linkedin.com/in/salvonicolosi/"
             ]
+            },
+            {
+            "@type": "WebSite",
+            "@id": "https://salvonicolosiph.it/#website",
+            "url": "https://salvonicolosiph.it/",
+            "name": "Salvo Nicolosi Photography",
+            "publisher": {
+                "@id": "https://salvonicolosiph.com/#organization"
+            },
+            "inLanguage": "it"
+            }
+        ]
         }
         </script>
 
@@ -136,17 +182,6 @@
     </head>
 
     <body id="top" class="page-about">
-
-        <a
-            class="skip-link"
-            href="#main-content"
-        >
-            Vai al contenuto principale
-        </a>
-
-        <!-- ==================================================
-             HEADER
-        ================================================== -->
 
         <header class="site-header">
 
@@ -166,8 +201,8 @@
 
                 <a
                     class="site-logo"
-                    href="/"
-                    aria-label="Salvo Nicolosi - Homepage"
+                    href="../"
+                    aria-label="Salvo Nicolosi - Pagina iniziale"
                 >
                     <img
                         class="site-logo-image site-logo-image-dark"
@@ -188,7 +223,7 @@
 
                 <nav
                     class="social-navigation"
-                    aria-label="Canali social"
+                    aria-label="Social media"
                 >
                     <ul class="social-list">
                         <li class="social-item">
@@ -308,7 +343,20 @@
 
         </header>
 
+        <!-- ==================================================
+            DIVIDER
+        ================================================== -->
+
+        <div
+            class="section-divider"
+            aria-hidden="true"
+        ></div>
+
         <main id="main-content">
+
+            <!-- ==================================================
+                HERO
+            ================================================== -->
 
             <section class="about-hero" aria-labelledby="about-title">
 
@@ -317,10 +365,6 @@
                     <div class="about-hero-content" data-reveal>
                         <p class="about-eyebrow">
                             <span class="eyebrow-bracket" aria-hidden="true"></span>
-                            Fotografo a Catania e in Sicilia
-                        </p>
-
-                        <p class="page-title-label">
                             Chi è Salvo Nicolosi
                         </p>
 
@@ -342,19 +386,20 @@
                                 fetchpriority="high"
                             >
                             <figcaption>
-                                Salvo Nicolosi, fotografo per persone, eventi e brand.
+                                Salvo Nicolosi, fotografo di persone, eventi e brand.
                             </figcaption>
                         </figure>
 
                         <div class="about-intro">
                             <p>
-                                Sono Salvo Nicolosi, fotografo a Catania. Lavoro tra matrimoni, eventi e progetti di comunicazione.
+                                Sono Salvo Nicolosi, fotografo a Catania. Racconto matrimoni, eventi e progetti commerciali.
                             </p>
 
                             <p>
-                                Mi muovo tra reportage e direzione, creando immagini autentiche, precise e capaci di durare.
+                                Il mio approccio unisce reportage e direzione, per immagini naturali e capaci di comunicare.
                             </p>
                         </div>
+
 
                     </div>
 
@@ -368,14 +413,20 @@
                             decoding="async"
                             fetchpriority="high"
                         >
-                        <figcaption>
-                            Salvo Nicolosi, fotografo per persone, eventi e brand.
-                        </figcaption>
                     </figure>
 
                 </div>
 
             </section>
+
+            <!-- ==================================================
+                DIVIDER
+            ================================================== -->
+
+            <div
+                class="section-divider"
+                aria-hidden="true"
+            ></div>
 
             <section class="about-section" data-reveal aria-labelledby="experience-title">
 
@@ -387,17 +438,17 @@
                         </p>
 
                         <h2 id="experience-title">
-                            Un percorso fotografico costruito tra persone, disciplina e comunicazione.
+                            Un percorso fatto di persone e intenzioni.
                         </h2>
                     </div>
 
                     <div class="about-copy">
                         <p>
-                            L'esperienza sul campo e la formazione presso lo Studio Fotografico Sicurella hanno definito un metodo basato su preparazione, precisione e cura.
+                            L’esperienza sul campo e la formazione presso lo Studio Fotografico Sicurella hanno dato forma al mio modo di fotografare.
                         </p>
 
                         <p>
-                            La Laurea e il Master in Digital Marketing completano questo percorso: ogni immagine deve essere bella, ma anche chiara, utile e coerente con il suo scopo.
+                            La laurea e il master in Digital Marketing hanno ampliato il mio sguardo sulla comunicazione e sui suoi obiettivi.
                         </p>
                     </div>
 
@@ -415,7 +466,7 @@
                             src="../assets/images/about/salvo-nicolosi-about-session-02.avif"
                             width="1067"
                             height="1600"
-                            alt="Salvo Nicolosi durante la preparazione di una sessione fotografica"
+                            alt="Salvo Nicolosi durante la preparazione di un servizio fotografico"
                             loading="lazy"
                             decoding="async"
                         >
@@ -424,15 +475,15 @@
                     <div class="about-statement-copy">
                         <p class="about-cta-frame">
                             <span class="eyebrow-bracket" aria-hidden="true"></span>
-                            Dentro il processo
+                            Dietro lo scatto
                         </p>
 
                         <h2 id="statement-title">
-                            La fotografia deve sembrare naturale. Il processo che la rende possibile non deve essere improvvisato.
+                            La naturalezza nasce da uno sguardo consapevole.
                         </h2>
 
                         <p>
-                            Prima ascolto e leggo il contesto; poi decido quando farmi da parte e quando guidare. L'obiettivo resta lo stesso: immagini che conservino atmosfera, identità e fiducia.
+                            Ascolto, osservo il contesto e scelgo quando farmi da parte e quando guidare. Per custodire atmosfera, identità e fiducia.
                         </p>
                     </div>
 
@@ -450,23 +501,32 @@
                         </p>
 
                         <h2 id="approach-title">
-                            Una presenza discreta, indicazioni chiare e attenzione a ciò che accade davvero.
+                            Una presenza discreta, una direzione chiara.
                         </h2>
                     </div>
 
                     <div class="about-copy">
                         <p>
-                            Ogni servizio inizia con l'ascolto: persone, contesto e destinazione delle immagini guidano le scelte prima dello scatto.
+                            Ogni lavoro parte dalla conoscenza delle persone, del contesto e dell’uso che verrà fatto delle fotografie.
                         </p>
 
                         <p>
-                            Durante il lavoro alterno osservazione e direzione, lasciando spazio alla spontaneità senza rinunciare a ritmo, eleganza e intenzione.
+                            Da lì, il processo resta semplice: preparo quando serve, osservo quando posso e intervengo quando è utile.
                         </p>
                     </div>
 
                 </div>
 
             </section>
+
+            <!-- ==================================================
+                DIVIDER
+            ================================================== -->
+
+            <div
+                class="section-divider"
+                aria-hidden="true"
+            ></div>
 
             <section class="about-section" data-reveal aria-labelledby="location-title">
 
@@ -478,13 +538,13 @@
                         </p>
 
                         <h2 id="location-title">
-                            Con base a Catania, lavoro in Sicilia, in Italia e all'estero.
+                            Da Catania, in tutta la Sicilia e oltre.
                         </h2>
                     </div>
 
                     <div class="about-copy">
                         <p>
-                            Lavoro principalmente tra Catania e le principali destinazioni della Sicilia, con disponibilità per matrimoni, eventi e progetti in Italia e all'estero.
+                            Lavoro soprattutto a Catania e in Sicilia, e sono disponibile per matrimoni, eventi e progetti in tutta Italia e all’estero.
                         </p>
                     </div>
 
@@ -492,7 +552,7 @@
 
             </section>
 
-            <section class="about-image-band" aria-label="Ritratti di Salvo Nicolosi">
+            <section class="about-image-band" aria-label="Dettagli del ritratto">
                 <img
                     src="../assets/images/about/salvo-nicolosi-about-portrait-black-white.avif"
                     width="1067"
@@ -506,7 +566,7 @@
                     src="../assets/images/about/salvo-nicolosi-about-session-01.avif"
                     width="1067"
                     height="1600"
-                    alt="Salvo Nicolosi durante una sessione di ritratto in studio"
+                    alt="Salvo Nicolosi durante una sessione fotografica in studio"
                     loading="lazy"
                     decoding="async"
                 >
@@ -519,17 +579,17 @@
                     <div>
                         <p class="about-cta-frame">
                             <span class="eyebrow-bracket" aria-hidden="true"></span>
-                            Parliamone
+                            Scrivimi
                         </p>
 
                         <h2 id="about-cta-title">
-                            Ogni storia merita la distanza, il ritmo e la cura giusti.
+                            Parliamo della tua idea.
                         </h2>
                     </div>
 
                     <div class="about-cta-copy">
                         <p>
-                            Se stai organizzando un matrimonio, un evento, un racconto aziendale o un progetto personale, inviami i primi dettagli: ti aiuterò a capire il prossimo passo utile.
+                            Raccontami il tuo evento o progetto: partiamo da lì.
                         </p>
 
                         <a class="button-primary" href="mailto:info@salvonicolosiph.com">
@@ -543,9 +603,13 @@
 
         </main>
 
+        <!-- ==================================================
+            BACK TO TOP
+        ================================================== -->
+
         <section
             class="back-to-top back-to-top--about-paper"
-            aria-label="Torna all'inizio"
+            aria-label="Back to top"
         >
 
             <div class="back-to-top-container">
@@ -554,7 +618,7 @@
                     class="back-to-top-link"
                     href="#top"
                 >
-                    Torna all'inizio
+                    Torna su
                     <span
                         class="back-to-top-arrow"
                         aria-hidden="true"
@@ -574,7 +638,7 @@
 
                     <a
                         class="footer-logo"
-                        href="/"
+                        href="../"
                         aria-label="Salvo Nicolosi Photography - Home"
                     >
                         <img
@@ -589,7 +653,7 @@
                     </p>
 
                     <p class="footer-description">
-                        Fotografo per matrimoni, eventi e progetti commerciali con base in Sicilia,
+                        Fotografo di matrimoni, eventi e progetti commerciali in Sicilia,
                         disponibile in tutto il mondo.
                     </p>
 
@@ -601,7 +665,7 @@
 
                         <nav
                             class="footer-section footer-navigation"
-                            aria-label="Navigazione nel piè di pagina"
+                            aria-label="Navigazione del footer"
                         >
                             <h2 class="footer-title">Esplora</h2>
 
@@ -625,7 +689,7 @@
                                 </li>
 
                                 <li>
-                                    <a class="footer-link" href="../contatti/">
+                                    <a class="footer-link" href="mailto:info@salvonicolosiph.com">
                                         Contatti
                                     </a>
                                 </li>
@@ -657,7 +721,7 @@
 
                         <nav
                             class="footer-section footer-social"
-                            aria-label="Canali social"
+                            aria-label="Social media"
                         >
 
                             <h2 class="footer-title">
@@ -724,17 +788,25 @@
 
                         <a
                             class="footer-legal-link"
-                            href="https://www.salvonicolosiph.com/privacy-policy/"
+                            href="../privacy-policy/"
                         >
-                            Informativa privacy
+                            Informativa sulla privacy
                         </a>
 
                         <a
                             class="footer-legal-link"
-                            href="https://www.salvonicolosiph.com/cookie-policy/"
+                            href="../cookie-policy/"
                         >
-                            Informativa cookie
+                            Informativa sui cookie
                         </a>
+
+                        <button
+                            class="footer-legal-link footer-cookie-settings"
+                            type="button"
+                            data-cookie-settings
+                        >
+                            Impostazioni cookie
+                        </button>
 
                     </nav>
 
@@ -743,37 +815,301 @@
             </div>
         </footer>
 
-        <script>
-            (function () {
-                var prefersReduced = window.matchMedia(
-                    "(prefers-reduced-motion: reduce)"
-                ).matches;
+        <!-- ==================================================
+            COOKIE CONSENT
+        ================================================== -->
 
-                if (prefersReduced || !("IntersectionObserver" in window)) {
-                    return;
-                }
+        <div
+            class="cookie-consent"
+            id="cookie-consent"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="cookie-consent-title"
+            aria-describedby="cookie-consent-description"
+            hidden
+        >
 
-                document.body.classList.add("reveal-ready");
+            <!-- ==================================================
+                INITIAL VIEW
+            ================================================== -->
 
-                var targets = document.querySelectorAll("[data-reveal]");
+            <div
+                class="cookie-consent-panel"
+                data-cookie-view="main"
+            >
 
-                var observer = new IntersectionObserver(
-                    function (entries) {
-                        entries.forEach(function (entry) {
-                            if (entry.isIntersecting) {
-                                entry.target.classList.add("is-visible");
-                                observer.unobserve(entry.target);
-                            }
-                        });
-                    },
-                    { threshold: 0.15, rootMargin: "0px 0px -8% 0px" }
-                );
+                <div class="cookie-consent-header">
 
-                targets.forEach(function (target) {
-                    observer.observe(target);
-                });
-            })();
-        </script>
+                    <p class="cookie-consent-eyebrow">
+                        Impostazioni cookie
+                    </p>
+
+                    <h2
+                        class="cookie-consent-title"
+                        id="cookie-consent-title"
+                    >
+                        La tua privacy,<br>
+                        la tua scelta.
+                    </h2>
+
+                </div>
+
+
+                <div class="cookie-consent-body">
+
+                    <p
+                        class="cookie-consent-description"
+                        id="cookie-consent-description"
+                    >
+                        Utilizziamo cookie necessari per il funzionamento del sito.
+                        Con il tuo consenso, possiamo usare strumenti di analisi
+                        e marketing per capire come viene utilizzato
+                        e migliorare la pubblicità.
+                    </p>
+
+
+                    <div class="cookie-consent-links">
+
+                        <a href="/cookie-policy/">
+                            Informativa sui cookie
+                        </a>
+
+                        <a href="/privacy-policy/">
+                            Informativa sulla privacy
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="cookie-consent-actions">
+
+                    <button
+                        class="cookie-button cookie-button--text"
+                        type="button"
+                        data-cookie-customize
+                    >
+                        Personalizza
+                    </button>
+
+                    <button
+                        class="cookie-button cookie-button--secondary"
+                        type="button"
+                        data-cookie-reject
+                    >
+                        Rifiuta i non necessari
+                    </button>
+
+                    <button
+                        class="cookie-button cookie-button--primary"
+                        type="button"
+                        data-cookie-accept
+                    >
+                        Accetta tutti
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- ==================================================
+                PREFERENCES VIEW
+            ================================================== -->
+
+            <div
+                class="cookie-consent-panel cookie-consent-preferences"
+                data-cookie-view="preferences"
+                hidden
+            >
+
+                <div class="cookie-consent-header">
+
+                    <button
+                        class="cookie-preferences-back"
+                        type="button"
+                        data-cookie-back
+                        aria-label="Torna alle impostazioni cookie"
+                    >
+                        ← Indietro
+                    </button>
+
+                    <p class="cookie-consent-eyebrow">
+                        Preferenze cookie
+                    </p>
+
+                    <h2 class="cookie-consent-title">
+                        Scegli cosa<br>
+                        autorizzare.
+                    </h2>
+
+                </div>
+
+
+                <div class="cookie-preferences-list">
+
+
+                    <!-- Necessary -->
+
+                    <div class="cookie-preference">
+
+                        <div class="cookie-preference-content">
+
+                            <div class="cookie-preference-heading">
+
+                                <h3>
+                                    Necessari
+                                </h3>
+
+                                <span class="cookie-preference-required">
+                                    Sempre attivi
+                                </span>
+
+                            </div>
+
+                            <p>
+                                Necessari per il funzionamento del sito
+                                e per ricordare le tue preferenze sulla privacy.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Analytics -->
+
+                    <div class="cookie-preference">
+
+                        <div class="cookie-preference-content">
+
+                            <div class="cookie-preference-heading">
+
+                                <div>
+
+                                    <h3>
+                                        Analisi
+                                    </h3>
+
+                                    <p>
+                                        Ci aiutano a capire come viene utilizzato
+                                        il sito e a misurarne le prestazioni.
+                                    </p>
+
+                                </div>
+
+
+                                <label class="cookie-toggle">
+
+                                    <input
+                                        type="checkbox"
+                                        data-cookie-analytics
+                                    >
+
+                                    <span
+                                        class="cookie-toggle-control"
+                                        aria-hidden="true"
+                                    ></span>
+
+                                    <span class="sr-only">
+                                        Consenti cookie di analisi
+                                    </span>
+
+                                </label>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Marketing -->
+
+                    <div class="cookie-preference">
+
+                        <div class="cookie-preference-content">
+
+                            <div class="cookie-preference-heading">
+
+                                <div>
+
+                                    <h3>
+                                        Marketing
+                                    </h3>
+
+                                    <p>
+                                        Utilizzati per misurare le campagne,
+                                        il remarketing e la pubblicità personalizzata.
+                                    </p>
+
+                                </div>
+
+
+                                <label class="cookie-toggle">
+
+                                    <input
+                                        type="checkbox"
+                                        data-cookie-marketing
+                                    >
+
+                                    <span
+                                        class="cookie-toggle-control"
+                                        aria-hidden="true"
+                                    ></span>
+
+                                    <span class="sr-only">
+                                        Consenti cookie di marketing
+                                    </span>
+
+                                </label>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="cookie-consent-links">
+
+                    <a href="/cookie-policy/">
+                        Informativa sui cookie
+                    </a>
+
+                    <a href="/privacy-policy/">
+                        Informativa sulla privacy
+                    </a>
+
+                </div>
+
+
+                <div class="cookie-consent-actions cookie-consent-actions--preferences">
+
+                    <button
+                        class="cookie-button cookie-button--secondary"
+                        type="button"
+                        data-cookie-reject
+                    >
+                        Rifiuta i non necessari
+                    </button>
+
+                    <button
+                        class="cookie-button cookie-button--primary"
+                        type="button"
+                        data-cookie-save
+                    >
+                        Salva preferenze
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
 
     </body>
 

@@ -1434,7 +1434,7 @@ body.reveal-ready .eyebrow-bracket::after {
     z-index: 1;
 
     width: 100%;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 3 / 2;
 
     margin: 0;
 
@@ -4937,11 +4937,15 @@ body.page-service-detail .service-detail-hero-media {
     background-color: var(--color-soft-gray);
 }
 
-body.page-service-detail .service-detail-hero-media img {
+.service-detail-hero-media {
+    width: 100%;
+    margin: 0;
+}
+
+.service-detail-hero-media img {
+    display: block;
     width: 100%;
     height: auto;
-    aspect-ratio: 4 / 5;
-    object-fit: cover;
     filter: saturate(0.92) contrast(1.03);
 }
 
