@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://salvonicolosiph.it/sitemap.xml
