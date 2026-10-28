@@ -8173,3 +8173,38 @@ button.footer-cookie-settings:focus-visible {
     }
 
 }
+
+/* Foto orizzontali: proporzioni originali e allineamento centrale */
+body.page-service-detail .service-detail-hero-media.is-landscape,
+body.page-service-detail .service-detail-approach-media.is-landscape {
+    width: 90%;
+    max-width: none;
+    height: auto;
+    aspect-ratio: auto;
+    margin: 0 auto;
+    align-self: center;
+}
+
+body.page-service-detail .service-detail-hero-media.is-landscape img,
+body.page-service-detail .service-detail-approach-media.is-landscape img {
+    display: block;
+    width: 90%;
+    margin-right: auto;
+    height: auto;
+    max-height: none;
+    aspect-ratio: auto;
+    object-fit: contain;
+}
+
+/* Desktop: più spazio alle sole foto orizzontali */
+@media (min-width: 1025px) {
+    body.page-service-detail .service-detail-hero:has(> .is-landscape) {
+        grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+        gap: clamp(40px, 5vw, 80px);
+    }
+
+    body.page-service-detail .service-detail-approach-layout:has(> .is-landscape) {
+        grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+        gap: clamp(40px, 5vw, 80px);
+    }
+}
