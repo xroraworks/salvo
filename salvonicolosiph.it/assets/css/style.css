@@ -793,7 +793,7 @@ body.menu-open .social-icon {
 
 .about-image-band img {
     width: 100%;
-    height: min(72vw, 760px);
+    height: min(72vw, 1200px);
     object-fit: cover;
     background-color: var(--color-black);
 }
@@ -8206,5 +8206,12 @@ body.page-service-detail .service-detail-approach-media.is-landscape img {
     body.page-service-detail .service-detail-approach-layout:has(> .is-landscape) {
         grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
         gap: clamp(40px, 5vw, 80px);
+    }
+}
+
+/* ABOUT — Una sola immagine su mobile */
+@media (max-width: 768px) {
+    .page-about .about-image-band img:nth-child(2) {
+        display: none;
     }
 }
