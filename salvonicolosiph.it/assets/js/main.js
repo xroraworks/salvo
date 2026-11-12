@@ -1279,3 +1279,43 @@ const initCookieConsentInterface = () => {
 ================================================== */
 
 initCookieConsentInterface();
+
+/* ==================================================
+   FLOATING WHATSAPP BUTTON
+================================================== */
+
+(() => {
+    const whatsappButtons = document.querySelectorAll(".whatsapp-float");
+
+    if (!whatsappButtons.length) {
+        return;
+    }
+
+    const consentDialog = document.querySelector("#cookie-consent");
+
+    const updateWhatsappVisibility = () => {
+        const cookieIsOpen =
+            document.body.classList.contains("cookie-consent-open") ||
+            (consentDialog !== null && !consentDialog.hidden);
+
+        whatsappButtons.forEach((button) => {
+            button.hidden = cookieIsOpen;
+        });
+    };
+
+    const observer = new MutationObserver(updateWhatsappVisibility);
+
+    observer.observe(document.body, {
+        attributes: true,
+        attributeFilter: ["class"]
+    });
+
+    if (consentDialog) {
+        observer.observe(consentDialog, {
+            attributes: true,
+            attributeFilter: ["hidden"]
+        });
+    }
+
+    updateWhatsappVisibility();
+})();
