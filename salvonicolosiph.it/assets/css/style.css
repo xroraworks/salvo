@@ -793,7 +793,7 @@ body.menu-open .social-icon {
 
 .about-image-band img {
     width: 100%;
-    height: min(72vw, 1200px);
+    height: min(72vw, 760px);
     object-fit: cover;
     background-color: var(--color-black);
 }
@@ -8208,18 +8208,47 @@ body.page-service-detail .service-detail-approach-media.is-landscape img {
         gap: clamp(40px, 5vw, 80px);
     }
 }
-
-/* ABOUT — Una sola immagine su mobile */
-@media (max-width: 768px) {
-    .page-about .about-image-band img:nth-child(2) {
+/* Portfolio: stack the hero before its desktop columns stop fitting. */
+@media (max-width: 900px) {
+    .portfolio-hero-container {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 3rem;
+    }
+    .portfolio-hero-media {
+        margin-inline: auto;
+    }
+}
+@media (max-width: 620px) {
+    .portfolio-hero-title {
+        font-size: clamp(2.5rem, 12vw, 4rem);
+    }
+}
+/* Remove only the decorative corner on the portfolio hero. */
+.portfolio-hero-image-wrapper::before {
+    content: none;
+}
+/* Keep the contact message first, without its photograph on mobile. */
+@media (max-width: 767px) {
+    .contact-hero-media {
         display: none;
     }
 }
 
-/* ==================================================
-   FLOATING WHATSAPP BUTTON
-================================================== */
-
+@media (max-width: 768px) {
+    .page-about .about-image-band img:nth-child(2),
+    .contact-hero-media, .portfolio-hero-media { display: none; }
+    .portfolio-grid { grid-template-columns: minmax(0, 1fr); row-gap: 3rem; }
+    .portfolio-grid .portfolio-card { width: 100%; max-width: 420px; margin-inline: auto; min-width: 0; }
+    .portfolio-card .portfolio-card-heading { height: auto; min-height: 0; }
+    .portfolio-card .portfolio-card-media { height: auto; min-height: 0; max-height: none; aspect-ratio: auto; }
+    .portfolio-card .portfolio-card-image { width: 100%; height: auto; min-height: 0; max-height: none; aspect-ratio: auto; object-fit: contain; transform: none; }
+    .portfolio-card-link:hover .portfolio-card-image,
+    .portfolio-card-link:focus-visible .portfolio-card-image { transform: none; }
+    .portfolio-hero-title { font-size: clamp(2.25rem, 9vw, 4rem); overflow-wrap: anywhere; }
+}
+@media (max-width: 900px) {
+    .portfolio-hero-container { grid-template-columns: minmax(0, 1fr); gap: 2rem; }
+}
 .whatsapp-float {
     position: fixed;
     right: calc(24px + env(safe-area-inset-right, 0px));
@@ -8235,32 +8264,68 @@ body.page-service-detail .service-detail-approach-media.is-landscape img {
     box-shadow: 0 4px 18px rgba(0, 0, 0, 0.18);
     text-decoration: none;
 }
-
-.whatsapp-float[hidden],
-body.cookie-consent-open .whatsapp-float {
-    display: none !important;
-}
-
-.whatsapp-float img {
-    display: block;
-    width: 32px;
-    height: 32px;
-}
-
-.whatsapp-float:hover {
-    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.25);
-}
-
-.whatsapp-float:focus-visible {
-    outline: 3px solid #111111;
-    outline-offset: 4px;
-}
-
+.whatsapp-float[hidden], body.cookie-consent-open .whatsapp-float { display: none !important; }
+.whatsapp-float img { display: block; width: 32px; height: 32px; }
+.whatsapp-float:hover { box-shadow: 0 6px 22px rgba(0, 0, 0, 0.25); }
+.whatsapp-float:focus-visible { outline: 3px solid #111111; outline-offset: 4px; }
 @media (max-width: 767px) {
     .whatsapp-float {
         right: calc(16px + env(safe-area-inset-right, 0px));
         bottom: calc(16px + env(safe-area-inset-bottom, 0px));
         width: 52px;
         height: 52px;
+    }
+}
+.contact-whatsapp-button::before {
+    content: "";
+    width: 1.4rem;
+    height: 1.4rem;
+    flex: none;
+    margin-right: .5rem;
+    background: url("../icons/whatsapp.svg") center / contain no-repeat;
+}
+
+/* Append to the end of style.css on both domains. */
+@media (max-width: 768px) {
+    body.page-services .services-offer-media,
+    body.page-services .services-page-hero-visual,
+    body.page-service-detail .service-detail-hero-media,
+    body.page-service-detail .service-detail-approach-media,
+    body.page-service-detail .service-detail-hero-media.is-landscape,
+    body.page-service-detail .service-detail-approach-media.is-landscape {
+        width: 100%;
+        max-width: 420px;
+        height: auto;
+        min-height: 0;
+        max-height: none;
+        aspect-ratio: auto;
+        margin-inline: auto;
+        align-self: start;
+    }
+
+    body.page-services .services-offer-media > a {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    body.page-services .services-offer-media img,
+    body.page-services .services-page-hero-visual img,
+    body.page-service-detail .service-detail-hero-media img,
+    body.page-service-detail .service-detail-approach-media img,
+    body.page-service-detail .service-detail-hero-media.is-landscape img,
+    body.page-service-detail .service-detail-approach-media.is-landscape img {
+        display: block;
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        max-height: none;
+        aspect-ratio: auto;
+        object-fit: contain;
+    }
+
+    body.page-services .services-offer:hover .services-offer-media img,
+    body.page-services .services-offer:focus-within .services-offer-media img {
+        transform: none;
     }
 }
